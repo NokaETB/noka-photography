@@ -82,28 +82,22 @@ window.NOKA = {
 
   /* ------------------------------------------------------------------
      3. TESTIMONIALS
-     These three are PLACEHOLDERS. Replace the text with real client
-     reviews, then change  placeholder: true  to  placeholder: false
-     (that removes the "Placeholder" label on the site).
+     Real client reviews, shared with permission (first name only).
+     Add more by copying a block. The layout fits 1 to 3 side by side.
+     placeholder: true  shows a "Placeholder" label, so keep it false.
      ------------------------------------------------------------------ */
   testimonials: [
     {
-      quote: "Placeholder review: I had no idea how to pose and it didn't matter. I left feeling like the best version of myself.",
-      name: "Client Name",
-      detail: "Portrait Session",
-      placeholder: true
+      quote: "I’ve never felt my vision come to life the way it does with Zach. He makes you feel so comfortable, and will be your hype man along the way. He works efficiently, and you can trust that you’ll be more than happy when you receive your photos. He also doesn’t keep you out of the dark during the process, and is so open to knowing what it is you want to capture during your shoot with him. Then he makes it happen! 10’s across the board, book him!",
+      name: "Tianna",
+      detail: "Portrait Session · Narragansett",
+      placeholder: false
     },
     {
-      quote: "Placeholder review: Easy, fun, and the photos looked like a magazine shoot. Everyone asked who took them.",
-      name: "Client Name",
-      detail: "Couples Session",
-      placeholder: true
-    },
-    {
-      quote: "Placeholder review: I came with a rough idea and Zach turned it into something I never could have pictured.",
-      name: "Client Name",
-      detail: "Editorial / Creative",
-      placeholder: true
+      quote: "Zach is a true professional! He makes you feel respected, empowered and comfortable, the ENTIRE time, regardless of the content being shot. He gets ‘the shot’ every time!",
+      name: "Brianne",
+      detail: "Portrait Session · Rhode Island",
+      placeholder: false
     }
   ],
 

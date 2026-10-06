@@ -364,6 +364,7 @@ html.js .reveal.is-in {
    TESTIMONIALS
    ========================================================================== */
 .testi__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 64px); }
+@media (min-width: 1001px) { .testi__grid[data-count="2"] { grid-template-columns: repeat(2, 1fr); } .testi__grid[data-count="1"] { grid-template-columns: minmax(0, 760px); } }
 .quote { border-top: 1px solid var(--ink); padding-top: 28px; display: flex; flex-direction: column; gap: 28px; }
 .quote__mark { font: 400 3.4rem/.6 var(--serif); height: 22px; }
 .quote__text { font: 400 clamp(1.25rem, 1.8vw, 1.65rem)/1.38 var(--serif); font-style: italic; }

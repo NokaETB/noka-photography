@@ -117,6 +117,7 @@
 
   /* ------------------------------------------------ TESTIMONIALS (config) */
   var testiGrid = $('#testiGrid');
+  testiGrid.dataset.count = String(Math.min((CFG.testimonials || []).length, 3));
   (CFG.testimonials || []).forEach(function (t, i) {
     var fig = el('figure', 'quote reveal');
     fig.style.setProperty('--d', String(i * 120));
