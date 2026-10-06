@@ -98,6 +98,12 @@ window.NOKA = {
       name: "Brianne",
       detail: "Portrait Session · Rhode Island",
       placeholder: false
+    },
+    {
+      quote: "Such an amazing effortless experience everytime. Photographers sometimes don’t go out of their way to make you as comfortable as possible and Zach has always made that his priority and treats you like a best friend while he’s at it. I’ve been lucky to have multiple amazing shoots with him and can’t wait for more!",
+      name: "Isabella",
+      detail: "Portrait Sessions · Rhode Island",
+      placeholder: false
     }
   ],
 
