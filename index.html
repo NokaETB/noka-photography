@@ -328,7 +328,16 @@
           <p class="eyebrow reveal"><span>08</span> Kind words</p>
           <h2 id="testi-title" class="display reveal">In their <em>own words.</em></h2>
         </header>
-        <div class="testi__grid" id="testiGrid"></div>
+        <div class="testi__carousel reveal" id="testiCarousel" role="region" aria-roledescription="carousel" aria-label="Client reviews">
+          <div class="testi__grid" id="testiGrid" tabindex="0"></div>
+          <div class="testi__nav" id="testiNav" hidden>
+            <div class="testi__dots" id="testiDots"></div>
+            <div class="testi__arrows">
+              <button class="testi__arrow" type="button" id="testiPrev" aria-label="Previous reviews">&larr;</button>
+              <button class="testi__arrow" type="button" id="testiNext" aria-label="Next reviews">&rarr;</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

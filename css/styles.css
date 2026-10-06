@@ -363,11 +363,24 @@ html.js .reveal.is-in {
 /* ==========================================================================
    TESTIMONIALS
    ========================================================================== */
-.testi__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 64px); }
-@media (min-width: 1001px) { .testi__grid[data-count="2"] { grid-template-columns: repeat(2, 1fr); } .testi__grid[data-count="1"] { grid-template-columns: minmax(0, 760px); } }
+.testi__carousel { --tg: clamp(28px, 4vw, 64px); }
+.testi__grid { position: relative; display: flex; align-items: flex-start; gap: var(--tg); transition: height .6s cubic-bezier(.2,.7,.2,1); overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.testi__grid::-webkit-scrollbar { display: none; }
+.testi__grid > .quote { flex: 0 0 calc((100% - 2 * var(--tg)) / 3); scroll-snap-align: start; min-width: 0; }
+.testi__nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: clamp(36px, 5vw, 56px); }
+.testi__nav[hidden] { display: none; }
+.testi__dots { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.testi__count { font: 400 .72rem/1 var(--sans); letter-spacing: .22em; color: var(--mute); }
+.testi__dot { width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
+.testi__dot::after { content: ""; position: absolute; left: 6px; right: 6px; top: 50%; height: 1px; background: var(--mute-l); transition: background .4s, height .4s; }
+.testi__dot[aria-current="true"]::after { background: var(--ink); height: 2px; }
+.testi__arrows { display: flex; gap: 10px; }
+.testi__arrow { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--ink); background: none; color: var(--ink); font: 400 1.1rem/1 var(--sans); cursor: pointer; transition: background .3s, color .3s; }
+.testi__arrow:hover, .testi__arrow:focus-visible { background: var(--ink); color: var(--paper); }
+.testi__dot:focus-visible, .testi__arrow:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .quote { border-top: 1px solid var(--ink); padding-top: 28px; display: flex; flex-direction: column; gap: 28px; }
 .quote__mark { font: 400 3.4rem/.6 var(--serif); height: 22px; }
-.quote__text { font: 400 clamp(1.25rem, 1.8vw, 1.65rem)/1.38 var(--serif); font-style: italic; }
+.quote__text { font: 400 clamp(1.15rem, 1.55vw, 1.5rem)/1.4 var(--serif); font-style: italic; white-space: pre-line; }
 .quote__by { margin-top: auto; font: 400 .68rem/1.6 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--mute); }
 .quote__by strong { display: block; color: var(--ink); font-weight: 500; }
 .quote__tag { align-self: flex-start; font: 500 .58rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; padding: 7px 10px; border: 1px dashed var(--mute-l); color: var(--mute-l); }
@@ -455,8 +468,7 @@ html.js .reveal.is-in {
 @media (max-width: 1000px) {
   .intro__text { grid-column: 1 / 8; }
   .intro__figure { grid-column: 8 / 13; }
-  .testi__grid { grid-template-columns: 1fr; }
-  .quote { max-width: 640px; }
+  .testi__grid > .quote { flex-basis: calc((100% - var(--tg)) / 2); }
   .sig__imgs { grid-column: 7 / 13; }
   .sig__b { left: -24%; }
 }
@@ -529,4 +541,11 @@ html.js .reveal.is-in {
   *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   html.js .reveal { opacity: 1; transform: none; }
   .mask img { transform: none; }
+}
+
+@media (max-width: 699px) {
+  .testi__grid > .quote { flex-basis: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .testi__grid { scroll-behavior: auto; transition: none; }
 }

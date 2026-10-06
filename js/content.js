@@ -83,7 +83,9 @@ window.NOKA = {
   /* ------------------------------------------------------------------
      3. TESTIMONIALS
      Real client reviews, shared with permission (first name only).
-     Add more by copying a block. The layout fits 1 to 3 side by side.
+     Add more by copying a block. The site shows 3 at a time (1 on phones)
+     and rotates through all of them. A blank line in a quote starts a new
+     paragraph.
      placeholder: true  shows a "Placeholder" label, so keep it false.
      ------------------------------------------------------------------ */
   testimonials: [
@@ -102,6 +104,36 @@ window.NOKA = {
     {
       quote: "Such an amazing effortless experience everytime. Photographers sometimes don’t go out of their way to make you as comfortable as possible and Zach has always made that his priority and treats you like a best friend while he’s at it. I’ve been lucky to have multiple amazing shoots with him and can’t wait for more!",
       name: "Isabella",
+      detail: "Portrait Sessions · Rhode Island",
+      placeholder: false
+    },
+    {
+      quote: "Zach is one of the only photographers I bring all my special ideas to, his work is 1000% worth the investment & he’s a great guy to be around. It’s impossible for him to take a bad photo. I look forward to working with him many more times.",
+      name: "Jack",
+      detail: "Portrait Sessions · Westerly",
+      placeholder: false
+    },
+    {
+      quote: "I’ve been working with Zach since 2023, and I truly couldn’t recommend him more! Every session has been such a great experience, and he has a way of making me feel confident, comfortable, and completely myself in front of the camera. The photos always come out absolutely beautiful, and he consistently captures exactly what I’m looking for even the detail shots!! If you’re looking for someone talented, professional, and easy to work with, he’s the one! 🤍",
+      name: "Meghan",
+      detail: "Portrait Sessions · Providence",
+      placeholder: false
+    },
+    {
+      quote: "Zach is so incredible to work with. I’ve done so many shoots beyond our engagement shoot and the result is always the same. Zach makes you feel so comfortable, so confident, and the pictures are incredible every single time!! I look forward to working with Zach in the future and he will hands down always be my number one choice!",
+      name: "Meghan",
+      detail: "Engagement & Couples · Narragansett",
+      placeholder: false
+    },
+    {
+      quote: "I’ve been working with Zach since 2021, so at this point we’re five years deep in creating absolute cinema.\n\nEvery time I come to him with a vision, somehow he makes it look even more expensive than what was in my head. The man does not take pictures he creates art.\n\nI drive THREE HOURS just to work with him. Three. Hours. In New York traffic. That alone should tell you the level of trust here, because I’m not doing all that for anybody with a camera and a Lightroom subscription.\n\nThe experience is always top tier, the execution is insane, and the final product speaks for itself every single time.",
+      name: "Saint",
+      detail: "Portrait Sessions · Rhode Island",
+      placeholder: false
+    },
+    {
+      quote: "The BEST of the best. Genuinely so good at what he does and makes you feel comfortable. He creates a positive environment and I always have so much fun!! Would 1000% recommend booking with him!!",
+      name: "Skylar",
       detail: "Portrait Sessions · Rhode Island",
       placeholder: false
     }

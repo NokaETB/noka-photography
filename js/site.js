@@ -117,10 +117,11 @@
 
   /* ------------------------------------------------ TESTIMONIALS (config) */
   var testiGrid = $('#testiGrid');
-  testiGrid.dataset.count = String(Math.min((CFG.testimonials || []).length, 3));
-  (CFG.testimonials || []).forEach(function (t, i) {
-    var fig = el('figure', 'quote reveal');
-    fig.style.setProperty('--d', String(i * 120));
+  var quotes = (CFG.testimonials || []).map(function (t, i) {
+    var fig = el('figure', 'quote');
+    fig.setAttribute('role', 'group');
+    fig.setAttribute('aria-roledescription', 'review');
+    fig.setAttribute('aria-label', (i + 1) + ' of ' + CFG.testimonials.length);
     if (t.placeholder) fig.appendChild(el('span', 'quote__tag', 'Placeholder: replace with a real review'));
     fig.appendChild(el('span', 'quote__mark', '“'));
     var bq = el('blockquote', 'quote__text', t.quote);
@@ -131,8 +132,95 @@
     by.appendChild(document.createTextNode(t.detail || ''));
     fig.appendChild(by);
     testiGrid.appendChild(fig);
-    if (window.__revealObserver) window.__revealObserver.observe(fig); else fig.classList.add('is-in');
+    return fig;
   });
+
+  /* Rotating reviews: shows as many as fit, advances a page at a time,
+     pauses while the visitor is reading or interacting. */
+  (function () {
+    var nav = $('#testiNav'), dotsEl = $('#testiDots'), box = $('#testiCarousel');
+    var DELAY = 8000;
+    var perView = 1, pages = 1, page = 0, timer = null, paused = false, inView = false;
+
+    function measure() {
+      if (!quotes.length) return;
+      perView = Math.max(1, Math.round(testiGrid.clientWidth / quotes[0].getBoundingClientRect().width));
+      pages = Math.max(1, Math.ceil(quotes.length / perView));
+      nav.hidden = pages < 2;
+      dotsEl.replaceChildren();
+      if (pages > 6) { dotsEl.appendChild(el('span', 'testi__count')); }
+      else for (var i = 0; i < pages; i++) {
+        var d = el('button', 'testi__dot');
+        d.type = 'button';
+        d.setAttribute('aria-label', 'Show reviews page ' + (i + 1) + ' of ' + pages);
+        d.addEventListener('click', (function (k) { return function () { go(k); hold(); }; })(i));
+        dotsEl.appendChild(d);
+      }
+      sync();
+    }
+    function go(p) {
+      page = (p + pages) % pages;
+      var first = Math.min(page * perView, quotes.length - perView);
+      testiGrid.scrollTo({ left: quotes[Math.max(0, first)].offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
+      mark();
+    }
+    function mark() {
+      $$('.testi__dot', dotsEl).forEach(function (d, i) { d.setAttribute('aria-current', String(i === page)); });
+      var c = $('.testi__count', dotsEl);
+      if (c) c.textContent = (page + 1) + ' / ' + pages;
+      fit();
+    }
+    // Size the row to the reviews on screen, so short ones don't leave a gap.
+    function fit() {
+      var first = Math.max(0, Math.min(page * perView, quotes.length - perView)), h = 0;
+      for (var i = first; i < first + perView && i < quotes.length; i++) h = Math.max(h, quotes[i].offsetHeight);
+      if (h) testiGrid.style.height = h + 'px';
+    }
+    function sync() {
+      var step = quotes.length > 1 ? quotes[1].offsetLeft - quotes[0].offsetLeft : 1;
+      var idx = Math.round(testiGrid.scrollLeft / step);
+      var atEnd = testiGrid.scrollLeft + testiGrid.clientWidth >= testiGrid.scrollWidth - 4;
+      page = atEnd ? pages - 1 : Math.min(pages - 1, Math.round(idx / perView));
+      mark();
+    }
+    // Longer reviews stay up longer, so there's time to read them.
+    function readTime() {
+      var first = Math.max(0, Math.min(page * perView, quotes.length - perView)), n = 0;
+      for (var i = first; i < first + perView && i < quotes.length; i++) n = Math.max(n, quotes[i].textContent.length);
+      return Math.min(18000, Math.max(DELAY, n * 40));
+    }
+    function tick() {
+      if (!paused && inView && !document.hidden) go(page + 1);
+      timer = setTimeout(tick, readTime());
+    }
+    function start() { stop(); if (!reduceMotion && pages > 1) timer = setTimeout(tick, readTime()); }
+    function stop() { if (timer) { clearTimeout(timer); timer = null; } }
+    var holdT;
+    function hold() { paused = true; clearTimeout(holdT); holdT = setTimeout(function () { paused = false; }, DELAY * 2); }
+
+    $('#testiPrev').addEventListener('click', function () { go(page - 1); hold(); });
+    $('#testiNext').addEventListener('click', function () { go(page + 1); hold(); });
+    box.addEventListener('mouseenter', function () { paused = true; });
+    box.addEventListener('mouseleave', function () { paused = false; });
+    box.addEventListener('focusin', function () { paused = true; });
+    box.addEventListener('focusout', function () { paused = false; });
+    testiGrid.addEventListener('touchstart', hold, { passive: true });
+    testiGrid.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(page + 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(page - 1); }
+    });
+    var st;
+    testiGrid.addEventListener('scroll', function () { clearTimeout(st); st = setTimeout(sync, 80); }, { passive: true });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { inView = en[0].isIntersecting; }, { rootMargin: '-30% 0px -30% 0px' }).observe(box);
+    } else { inView = true; }
+    var rt;
+    window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { measure(); go(page); start(); }, 200); });
+    measure();
+    start();
+    window.addEventListener('load', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  })();
 
   /* -------------------------------------------------- GALLERY (config) */
   var items = CFG.gallery || [];
