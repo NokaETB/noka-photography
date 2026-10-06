@@ -13,7 +13,6 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="geo.region" content="US-RI">
   <meta name="theme-color" content="#0a0a0a">
-  <!-- IMPORTANT: change nokaphotography.com below to your real domain before launch -->
   <link rel="canonical" href="https://nokaphotography.com/">
 
   <meta property="og:type" content="website">
@@ -433,7 +432,9 @@
           </p>
         </header>
 
-        <form class="form reveal" id="inquiryForm" novalidate>
+        <form class="form reveal" id="inquiryForm" name="inquiry" method="POST" action="/" data-netlify="true" netlify-honeypot="website" novalidate>
+          <input type="hidden" name="form-name" value="inquiry">
+          <input type="hidden" name="subject" value="New session inquiry from nokaphotography.com">
           <div class="field">
             <label for="f-name">Name</label>
             <input id="f-name" name="name" type="text" autocomplete="name" required>

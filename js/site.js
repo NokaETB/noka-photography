@@ -395,24 +395,24 @@
     if (SITE.formEndpoint) {
       submitBtn.disabled = true;
       setStatus('Sending…');
-      var body = new FormData(form);
-      body.delete('website');
-      body.append('_subject', 'New session inquiry: ' + data.session);
-      fetch(SITE.formEndpoint, { method: 'POST', body: body, headers: { 'Accept': 'application/json' } })
+      form.elements.subject.value = 'New session inquiry: ' + data.session + ' from ' + data.name;
+      var body = new URLSearchParams(new FormData(form)).toString();
+      fetch(SITE.formEndpoint, { method: 'POST', body: body, headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
         .then(function (r) {
           if (!r.ok) throw new Error('bad status');
           form.reset();
           setStatus('Got it! Your inquiry is in and I’ll be in touch soon.', 'ok');
         })
         .catch(function () {
+          mailtoFallback(data);
           var span = document.createElement('span');
-          span.appendChild(document.createTextNode('Something went wrong sending that. Please email '));
+          span.appendChild(document.createTextNode('Your email app should open with your inquiry ready to send. If it doesn’t, email '));
           var a = document.createElement('a');
           a.href = 'mailto:' + SITE.email;
           a.textContent = SITE.email;
           span.appendChild(a);
           span.appendChild(document.createTextNode(' directly.'));
-          setStatus(span, 'err');
+          setStatus(span, 'ok');
         })
         .then(function () { submitBtn.disabled = false; });
     } else {

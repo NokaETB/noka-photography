@@ -16,11 +16,11 @@ window.NOKA = {
     phone: "401-308-2953",
 
     // INQUIRY FORM
-    // Paste a Formspree (or similar) endpoint here so inquiries land in your inbox
-    // automatically, e.g. "https://formspree.io/f/abcdwxyz"
-    // Leave it as "" and the form will open the visitor's email app with the
-    // message pre-filled and addressed to you (works, but less seamless).
-    formEndpoint: ""
+    // "/" sends inquiries to Netlify Forms, which emails them to you (set the
+    // email under Netlify > Forms > Form notifications). If sending ever fails,
+    // the form opens the visitor's email app with the message pre-filled instead.
+    // Leave it as "" to always use the email-app version.
+    formEndpoint: "/"
   },
 
   /* ------------------------------------------------------------------
