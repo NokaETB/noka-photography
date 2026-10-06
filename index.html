@@ -535,5 +535,17 @@
 
   <script src="js/content.js"></script>
   <script src="js/site.js" defer></script>
+  <!-- Visitor stats (GoatCounter: no cookies). Only counts visits on the real
+       domain, so previews and tests don't skew the numbers.
+       Dashboard: https://nokaphotography.goatcounter.com -->
+  <script>
+    if (/(^|\.)nokaphotography\.com$/.test(location.hostname)) {
+      var gc = document.createElement('script');
+      gc.async = true;
+      gc.src = 'https://gc.zgo.at/count.js';
+      gc.setAttribute('data-goatcounter', 'https://nokaphotography.goatcounter.com/count');
+      document.body.appendChild(gc);
+    }
+  </script>
 </body>
 </html>
