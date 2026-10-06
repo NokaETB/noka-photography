@@ -136,6 +136,24 @@ window.NOKA = {
       name: "Skylar",
       detail: "Portrait Sessions · Rhode Island",
       placeholder: false
+    },
+    {
+      quote: "The photoshoot turned out amazing, and I’m so happy with the results! He made me feel comfortable throughout the shoot and was flexible and understanding. He was knowledgeable about poses and lighting, which made the whole experience feel easy and natural. Communication was excellent both before and after the shoot. I couldn’t have asked for a better experience or more beautiful photos!",
+      name: "Gilana",
+      detail: "Portrait Session · Narragansett",
+      placeholder: false
+    },
+    {
+      quote: "Noka is truly the best! Always super professional and patient, playlist is always a vibe as well. Just overall, the photography talent is insane. Editing skills are unmatched, you will always get a wow moment when looking at results. I’m sure anyone who has worked with him can agree to that!",
+      name: "Madelyn",
+      detail: "Portrait Sessions · Boston",
+      placeholder: false
+    },
+    {
+      quote: "Zach made the photoshoot experience special every time! He brings an energy that pumps you up with confidence and comfort- which was huge for my first time in front of the camera. Even living in MA I’ll forever seek out Zach for my shoots knowing the photos are perfect every time.",
+      name: "Jessica",
+      detail: "Couples Sessions · Boston",
+      placeholder: false
     }
   ],
 
