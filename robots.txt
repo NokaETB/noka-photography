@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Change to your real domain before launch
+Sitemap: https://nokaphotography.com/sitemap.xml
