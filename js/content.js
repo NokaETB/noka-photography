@@ -263,6 +263,7 @@ window.NOKA = {
     { src: "images/editorial-08.jpg"   , cat: "editorial" , ratio: "2/3", alt: "Red cape caught in the wind, winter trees" },
     { src: "images/couple-08.jpg"      , cat: "couples"   , ratio: "2/3", alt: "Proposal on the rocks at sunset" },
     { src: "images/lifestyle-08.jpg"   , cat: "lifestyle" , ratio: "2/3", alt: "White outfit in golden grass" },
+    { src: "images/family-08.jpg"      , cat: "family"    , ratio: "4/5", alt: "Newborn asleep in a crib beside a teddy bear" },
     { src: "images/editorial-09.jpg"   , cat: "editorial" , ratio: "4/5", alt: "Boxer with wrapped hands and gloves under gym lights" },
     { src: "images/lifestyle-09.jpg"   , cat: "lifestyle" , ratio: "2/3", alt: "Hanging from a basketball hoop in a red set" }
   ]
