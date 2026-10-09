@@ -127,6 +127,16 @@
     var bq = el('blockquote', 'quote__text', t.quote);
     bq.style.margin = '0';
     fig.appendChild(bq);
+    // Very long reviews show the first few lines, with a button to read the rest.
+    if (t.quote.length > 900) {
+      fig.classList.add('is-long');
+      bq.id = 'quote-' + i;
+      var more = el('button', 'quote__more', 'Read more');
+      more.type = 'button';
+      more.setAttribute('aria-expanded', 'false');
+      more.setAttribute('aria-controls', bq.id);
+      fig.appendChild(more);
+    }
     var by = el('figcaption', 'quote__by');
     by.appendChild(el('strong', '', t.name));
     by.appendChild(document.createTextNode(t.detail || ''));
@@ -158,7 +168,14 @@
       }
       sync();
     }
+    function setOpen(fig, open) {
+      fig.classList.toggle('is-open', open);
+      var b = $('.quote__more', fig);
+      b.textContent = open ? 'Show less' : 'Read more';
+      b.setAttribute('aria-expanded', String(open));
+    }
     function go(p) {
+      $$('.quote.is-open', testiGrid).forEach(function (f) { setOpen(f, false); });
       page = (p + pages) % pages;
       var first = Math.min(page * perView, quotes.length - perView);
       testiGrid.scrollTo({ left: quotes[Math.max(0, first)].offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
@@ -205,6 +222,13 @@
     box.addEventListener('focusin', function () { paused = true; });
     box.addEventListener('focusout', function () { paused = false; });
     testiGrid.addEventListener('touchstart', hold, { passive: true });
+    testiGrid.addEventListener('click', function (e) {
+      var b = e.target.closest('.quote__more');
+      if (!b) return;
+      setOpen(b.parentNode, !b.parentNode.classList.contains('is-open'));
+      fit();
+      hold();
+    });
     testiGrid.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowRight') { e.preventDefault(); go(page + 1); }
       else if (e.key === 'ArrowLeft') { e.preventDefault(); go(page - 1); }

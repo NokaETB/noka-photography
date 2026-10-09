@@ -381,6 +381,8 @@ html.js .reveal.is-in {
 .quote { border-top: 1px solid var(--ink); padding-top: 28px; display: flex; flex-direction: column; gap: 28px; }
 .quote__mark { font: 400 3.4rem/.6 var(--serif); height: 22px; }
 .quote__text { font: 400 clamp(1.15rem, 1.55vw, 1.5rem)/1.4 var(--serif); font-style: italic; white-space: pre-line; }
+.quote.is-long:not(.is-open) .quote__text { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 10; line-clamp: 10; overflow: hidden; }
+.quote__more { align-self: flex-start; margin-top: -12px; padding: 4px 0; background: none; border: 0; border-bottom: 1px solid currentColor; color: var(--ink); font: 400 .68rem/1.6 var(--sans); letter-spacing: .22em; text-transform: uppercase; cursor: pointer; }
 .quote__by { margin-top: auto; font: 400 .68rem/1.6 var(--sans); letter-spacing: .22em; text-transform: uppercase; color: var(--mute); }
 .quote__by strong { display: block; color: var(--ink); font-weight: 500; }
 .quote__tag { align-self: flex-start; font: 500 .58rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; padding: 7px 10px; border: 1px dashed var(--mute-l); color: var(--mute-l); }

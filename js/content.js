@@ -153,6 +153,30 @@ window.NOKA = {
       name: "Jessica",
       detail: "Couples Sessions · Boston",
       placeholder: false
+    },
+    {
+      quote: "Zach is truly the best!! I’ve known him for over 7 years, and we’ve done so many different shoots together, from lifestyle to maternity and everything in between. He always makes me feel beautiful, comfortable, and confident in front of the camera. He’s great with help for posing & keeps the energy fun! All while being professional and genuinely such a great person. I seriously can not recommend Zach enough 💙",
+      name: "Mercedes",
+      detail: "Portrait Sessions · Newport",
+      placeholder: false
+    },
+    {
+      quote: "Zach is hands down my favorite photographer, and I genuinely can’t recommend him enough! He was the photographer I chose for my very first photoshoot, and from the beginning, he made me feel completely comfortable and confident in front of the camera. He is amazing at working with beginners because he sends concepts and pose ideas beforehand, talks you through what to do during the shoot, and is always there to help with posing. He even has music playing and keeps the entire experience so chill and fun.\n\nI’ve now worked with Zach multiple times, including for my graduation photos and several other shoots, and every experience has been amazing. He is incredibly creative, gets SO many photos, and has a great eye for different editing styles. His turnaround time is also super fast!\n\nWhat I appreciate most is how personable and trustworthy he is. We’ve become friends over the years, and he is genuinely one of the only photographers I feel completely comfortable going to without bringing someone with me. He always hypes you up, makes you feel confident, and makes the shoot feel more like creating together than just taking pictures. He’s also an amazing family man, which says a lot about the kind of person he is.\n\nI truly love the work we create together, and I will choose Zach for my photoshoots for years to come. If you’re looking for a photographer who is talented, creative, professional, and actually makes you feel comfortable in front of the camera, book with him! You will not regret it!",
+      name: "Savannah",
+      detail: "Graduation & Modeling · Newport & more",
+      placeholder: false
+    },
+    {
+      quote: "Zach is as professional as it gets. Extremely kind and always trying to make you look like you’ve done this before!",
+      name: "Sam",
+      detail: "Couples Session",
+      placeholder: false
+    },
+    {
+      quote: "Zach is so fun to work with! I love how he’s just as excited as I am about our shoot. He always has just as many ideas as I do. He’s incredibly professional to work with. Zach has a way of making you feel comfortable and confident during shooting. I always feel so beautiful and happy leaving a shoot. I can’t wait to continue creating together!",
+      name: "Alexandra",
+      detail: "Beach, Fitness & Creative · Rhode Island",
+      placeholder: false
     }
   ],
 
