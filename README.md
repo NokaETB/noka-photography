@@ -60,6 +60,8 @@ Don't have 21 yet? Delete the lines you can't fill from `js/content.js` — the 
 
 Open `js/content.js` in any text editor (Notepad, TextEdit, VS Code). Change text between the quotation marks, save, refresh the site.
 
+After changing prices or testimonials, run `node tools/prerender.js`. It copies them into `index.html` so they also show for visitors and tools that don't run JavaScript.
+
 **Swap a photo:** replace the file in `images/` with your photo, same filename. Done.
 
 **Add a photo:** copy one gallery line in `content.js`, change `src`, `cat`, `ratio`, `alt`. Add the file to `images/`.

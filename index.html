@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__nokaReady)document.documentElement.classList.remove('js');},3000);</script>
 
   <!-- ======================= SEO ======================= -->
   <title>Noka Photography | Rhode Island Portrait &amp; Editorial Photographer</title>
@@ -59,7 +59,7 @@
       "name": "How do I book?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Send me your date and location through the form below, by email or on Instagram, and I'll get back to you with availability. A non-refundable deposit of $50 to $150, depending on the session, locks in your date and comes off your total. The rest is due the day of your shoot. Cash is preferred, but all the usual payment options work too."
+        "text": "Send me your date and location through the form below, by email or on Instagram, and I'll get back to you with availability. A non-refundable deposit of $50 to $150, depending on the session, locks in your date and comes off your total. The rest is due the day of your shoot. Cash is preferred for personal sessions, but all the usual payment options work too, and businesses can pay by invoice."
       }
     },
     {
@@ -169,6 +169,7 @@
       <a href="#portfolio">Work</a>
       <a href="#experience">Experience</a>
       <a href="#investment">Investment</a>
+      <a href="#business">Business</a>
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -185,6 +186,7 @@
       <a href="#portfolio">Work</a>
       <a href="#experience">Experience</a>
       <a href="#investment">Investment</a>
+      <a href="#business">For Businesses</a>
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
       <a href="#inquire">Book a session</a>
@@ -412,7 +414,35 @@
           <p class="lede reveal">Every session is built around your vision, your location and the scope of the shoot. Full retouching comes standard. Always.</p>
           <p class="invest__note reveal">A non-refundable deposit locks in your date and comes off your total. Within 25 miles of Providence? No travel fee.</p>
         </header>
-        <ul class="price-list" id="priceList"></ul>
+        <ul class="price-list" id="priceList">
+          <!-- prerender:pricing -->
+          <li class="price-row"><h3 class="price-row__name">Portrait Session</h3><div class="price-row__price"><span>Starting at</span><strong>$400</strong></div><p class="price-row__note">1 hour at the location of your choice, 2 outfits and at least 25 fully edited photos. Want more? 2 hours, multiple locations, 3 outfits and at least 40 photos for $600.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Portrait Session">Inquire</a></li>
+          <li class="price-row"><h3 class="price-row__name">Couples</h3><div class="price-row__price"><span>Starting at</span><strong>$700</strong></div><p class="price-row__note">1 hour at one location and at least 25 fully retouched photos of you two. Or go big: 2 hours, two locations and at least 40 photos for $1,000.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Couples">Inquire</a></li>
+          <li class="price-row"><h3 class="price-row__name">Graduation</h3><div class="price-row__price"><span>Starting at</span><strong>$450</strong></div><p class="price-row__note">Your moment, done right. 1 hour solo at the location of your choice, cap and gown plus 2 outfits. Or 2 hours, two locations and 3 outfits for $650. Grad groups from $175 per person.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Graduation">Inquire</a></li>
+          <li class="price-row"><h3 class="price-row__name">Family</h3><div class="price-row__price"><span>Starting at</span><strong>$700</strong></div><p class="price-row__note">1 hour at one location for up to 5 people and at least 30 fully edited photos. Or 2 hours, two locations, up to 8 people and at least 50 photos for $850. Extra family members are $30 each.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Family">Inquire</a></li>
+          <li class="price-row"><h3 class="price-row__name">Headshots</h3><div class="price-row__price"><span>Starting at</span><strong>$175</strong></div><p class="price-row__note">Look like you mean business. 30 minutes, one look and at least 5 fully retouched photos. Or 60 minutes, up to 3 looks and at least 12 photos for $300. Teams of 3 or more are $150 per person, at your office.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Headshots">Inquire</a></li>
+          <li class="price-row"><h3 class="price-row__name">Groups</h3><div class="price-row__price"><span>Starting at</span><strong>$700</strong></div><p class="price-row__note">Friends, teams, clubs and celebrations. 1 hour for up to 10 people and at least 30 photos. Or 2 hours, two locations, up to 15 people and at least 50 photos for $1,000. Extra people are $40 each.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Groups">Inquire</a></li>
+          <li class="price-row"><h3 class="price-row__name">Events</h3><div class="price-row__price"><span>Starting at</span><strong>$800</strong></div><p class="price-row__note">Birthdays, parties and business events, captured with actual energy. 3 hours of coverage and at least 120 fully edited photos. Or 5 hours and at least 200 photos for $1,200. Extra hours are $150.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Event">Inquire</a></li>
+          <li class="price-row"><h3 class="price-row__name">Editorial / Creative</h3><div class="price-row__price"><strong>Custom Quote</strong></div><p class="price-row__note">Got a big idea? Let's build it. Concept-led shoots are priced around the concept, styling and scope.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Editorial / Creative">Request a quote</a></li>
+          <!-- /prerender:pricing -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= 8b. FOR BUSINESSES ======================= -->
+    <section class="section section--ink2 invest biz" id="business" aria-labelledby="biz-title">
+      <div class="wrap invest__grid">
+        <header class="invest__head">
+          <p class="eyebrow reveal"><span>08</span> For businesses</p>
+          <h2 id="biz-title" class="display reveal">Built for <em>your brand.</em></h2>
+          <p class="lede reveal">Headshots for your team, coverage for your event and images for your brand, with the same direction and full retouching every client gets.</p>
+          <p class="invest__note reveal">Businesses can pay by invoice. You get a written quote up front and an itemized invoice, and how you'll use the photos is agreed before the shoot.</p>
+        </header>
+        <ul class="price-list">
+          <li class="price-row reveal"><h3 class="price-row__name">Team Headshots</h3><div class="price-row__price"><span>Starting at</span><strong>$150</strong></div><p class="price-row__note">Per person for teams of 3 or more, shot at your office. Individual headshots start at $175.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Headshots">Inquire</a></li>
+          <li class="price-row reveal"><h3 class="price-row__name">Business Events</h3><div class="price-row__price"><span>Starting at</span><strong>$800</strong></div><p class="price-row__note">3 hours of coverage and at least 120 fully edited photos. Or 5 hours and at least 200 photos for $1,200. Extra hours are $150.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Event">Inquire</a></li>
+          <li class="price-row reveal"><h3 class="price-row__name">Brand &amp; Campaign</h3><div class="price-row__price"><strong>Custom Quote</strong></div><p class="price-row__note">Product, campaign and social content, priced around the concept, styling and scope.</p><a class="price-row__cta" href="#inquire" data-inquire data-session="Editorial / Creative">Request a quote</a></li>
+        </ul>
       </div>
     </section>
 
@@ -420,11 +450,29 @@
     <section class="section section--paper testi" id="testimonials" aria-labelledby="testi-title">
       <div class="wrap">
         <header class="sec-head">
-          <p class="eyebrow reveal"><span>08</span> Kind words</p>
+          <p class="eyebrow reveal"><span>09</span> Kind words</p>
           <h2 id="testi-title" class="display reveal">In their <em>own words.</em></h2>
         </header>
         <div class="testi__carousel reveal" id="testiCarousel" role="region" aria-roledescription="carousel" aria-label="Client reviews">
-          <div class="testi__grid" id="testiGrid" tabindex="0"></div>
+          <div class="testi__grid" id="testiGrid" tabindex="0">
+          <!-- prerender:testimonials -->
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="1 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">I’ve never felt my vision come to life the way it does with Zach. He makes you feel so comfortable, and will be your hype man along the way. He works efficiently, and you can trust that you’ll be more than happy when you receive your photos. He also doesn’t keep you out of the dark during the process, and is so open to knowing what it is you want to capture during your shoot with him. Then he makes it happen! 10’s across the board, book him!</blockquote><figcaption class="quote__by"><strong>Tianna</strong>Portrait Session · Narragansett</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="2 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Zach is a true professional! He makes you feel respected, empowered and comfortable, the ENTIRE time, regardless of the content being shot. He gets ‘the shot’ every time!</blockquote><figcaption class="quote__by"><strong>Brianne</strong>Portrait Session · Rhode Island</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="3 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Such an amazing effortless experience every time. Photographers sometimes don’t go out of their way to make you as comfortable as possible and Zach has always made that his priority and treats you like a best friend while he’s at it. I’ve been lucky to have multiple amazing shoots with him and can’t wait for more!</blockquote><figcaption class="quote__by"><strong>Isabella</strong>Portrait Sessions · Rhode Island</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="4 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Zach is one of the only photographers I bring all my special ideas to, his work is 1000% worth the investment &amp; he’s a great guy to be around. It’s impossible for him to take a bad photo. I look forward to working with him many more times.</blockquote><figcaption class="quote__by"><strong>Jack</strong>Portrait Sessions · Westerly</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="5 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">I’ve been working with Zach since 2023, and I truly couldn’t recommend him more! Every session has been such a great experience, and he has a way of making me feel confident, comfortable, and completely myself in front of the camera. The photos always come out absolutely beautiful, and he consistently captures exactly what I’m looking for even the detail shots!! If you’re looking for someone talented, professional, and easy to work with, he’s the one! 🤍</blockquote><figcaption class="quote__by"><strong>Meghan</strong>Portrait Sessions · Providence</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="6 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Zach is so incredible to work with. I’ve done so many shoots beyond our engagement shoot and the result is always the same. Zach makes you feel so comfortable, so confident, and the pictures are incredible every single time!! I look forward to working with Zach in the future and he will hands down always be my number one choice!</blockquote><figcaption class="quote__by"><strong>Meghan</strong>Engagement &amp; Couples · Narragansett</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="7 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">I’ve been working with Zach since 2021, so at this point we’re five years deep in creating absolute cinema.&#10;&#10;Every time I come to him with a vision, somehow he makes it look even more expensive than what was in my head. The man does not take pictures he creates art.&#10;&#10;I drive THREE HOURS just to work with him. Three. Hours. In New York traffic. That alone should tell you the level of trust here, because I’m not doing all that for anybody with a camera and a Lightroom subscription.&#10;&#10;The experience is always top tier, the execution is insane, and the final product speaks for itself every single time.</blockquote><figcaption class="quote__by"><strong>Saint</strong>Portrait Sessions · Rhode Island</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="8 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">The BEST of the best. Genuinely so good at what he does and makes you feel comfortable. He creates a positive environment and I always have so much fun!! Would 1000% recommend booking with him!!</blockquote><figcaption class="quote__by"><strong>Skylar</strong>Portrait Sessions · Rhode Island</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="9 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">The photoshoot turned out amazing, and I’m so happy with the results! He made me feel comfortable throughout the shoot and was flexible and understanding. He was knowledgeable about poses and lighting, which made the whole experience feel easy and natural. Communication was excellent both before and after the shoot. I couldn’t have asked for a better experience or more beautiful photos!</blockquote><figcaption class="quote__by"><strong>Gilana</strong>Portrait Session · Narragansett</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="10 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Noka is truly the best! Always super professional and patient, playlist is always a vibe as well. Just overall, the photography talent is insane. Editing skills are unmatched, you will always get a wow moment when looking at results. I’m sure anyone who has worked with him can agree to that!</blockquote><figcaption class="quote__by"><strong>Madelyn</strong>Portrait Sessions · Boston</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="11 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Zach made the photoshoot experience special every time! He brings an energy that pumps you up with confidence and comfort, which was huge for my first time in front of the camera. Even living in MA I’ll forever seek out Zach for my shoots knowing the photos are perfect every time.</blockquote><figcaption class="quote__by"><strong>Jessica</strong>Couples Sessions · Boston</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="12 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Zach is truly the best!! I’ve known him for over 7 years, and we’ve done so many different shoots together, from lifestyle to maternity and everything in between. He always makes me feel beautiful, comfortable, and confident in front of the camera. He’s great with help for posing &amp; keeps the energy fun! All while being professional and genuinely such a great person. I seriously can not recommend Zach enough 💙</blockquote><figcaption class="quote__by"><strong>Mercedes</strong>Portrait Sessions · Newport</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="13 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Zach is hands down my favorite photographer, and I genuinely can’t recommend him enough! He was the photographer I chose for my very first photoshoot, and from the beginning, he made me feel completely comfortable and confident in front of the camera. He is amazing at working with beginners because he sends concepts and pose ideas beforehand, talks you through what to do during the shoot, and is always there to help with posing. He even has music playing and keeps the entire experience so chill and fun.&#10;&#10;I’ve now worked with Zach multiple times, including for my graduation photos and several other shoots, and every experience has been amazing. He is incredibly creative, gets SO many photos, and has a great eye for different editing styles. His turnaround time is also super fast!&#10;&#10;What I appreciate most is how personable and trustworthy he is. We’ve become friends over the years, and he is genuinely one of the only photographers I feel completely comfortable going to without bringing someone with me. He always hypes you up, makes you feel confident, and makes the shoot feel more like creating together than just taking pictures. He’s also an amazing family man, which says a lot about the kind of person he is.&#10;&#10;I truly love the work we create together, and I will choose Zach for my photoshoots for years to come. If you’re looking for a photographer who is talented, creative, professional, and actually makes you feel comfortable in front of the camera, book with him! You will not regret it!</blockquote><figcaption class="quote__by"><strong>Savannah</strong>Graduation &amp; Modeling · Newport &amp; more</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="14 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Zach is as professional as it gets. Extremely kind and always trying to make you look like you’ve done this before!</blockquote><figcaption class="quote__by"><strong>Sam</strong>Couples Session</figcaption></figure>
+          <figure class="quote" role="group" aria-roledescription="review" aria-label="15 of 15"><span class="quote__mark">“</span><blockquote class="quote__text" style="margin:0">Zach is so fun to work with! I love how he’s just as excited as I am about our shoot. He always has just as many ideas as I do. He’s incredibly professional to work with. Zach has a way of making you feel comfortable and confident during shooting. I always feel so beautiful and happy leaving a shoot. I can’t wait to continue creating together!</blockquote><figcaption class="quote__by"><strong>Alexandra</strong>Beach, Fitness &amp; Creative · Rhode Island</figcaption></figure>
+          <!-- /prerender:testimonials -->
+          </div>
           <div class="testi__nav" id="testiNav" hidden>
             <div class="testi__dots" id="testiDots"></div>
             <div class="testi__arrows">
@@ -440,14 +488,14 @@
     <section class="section section--paper2 faq" id="faq" aria-labelledby="faq-title">
       <div class="wrap faq__grid">
         <header class="faq__head">
-          <p class="eyebrow reveal"><span>09</span> Questions</p>
+          <p class="eyebrow reveal"><span>10</span> Questions</p>
           <h2 id="faq-title" class="display reveal">Good <em>to know.</em></h2>
         </header>
         <div class="faq__list reveal" id="faqList">
 
           <div class="faq__item">
             <h3><button class="faq__q" aria-expanded="false" aria-controls="a1" id="q1">How do I book?<span class="faq__icon" aria-hidden="true"></span></button></h3>
-            <div class="faq__a" id="a1" role="region" aria-labelledby="q1"><div><p>Send me your date and location through the form below, by email or on Instagram, and I'll get back to you with availability. A non-refundable deposit of $50 to $150, depending on the session, locks in your date and comes off your total. The rest is due the day of your shoot. Cash is preferred, but all the usual payment options work too.</p></div></div>
+            <div class="faq__a" id="a1" role="region" aria-labelledby="q1"><div><p>Send me your date and location through the form below, by email or on Instagram, and I'll get back to you with availability. A non-refundable deposit of $50 to $150, depending on the session, locks in your date and comes off your total. The rest is due the day of your shoot. Cash is preferred for personal sessions, but all the usual payment options work too, and businesses can pay by invoice.</p></div></div>
           </div>
 
           <div class="faq__item">
@@ -525,7 +573,7 @@
     <section class="section section--ink inquire" id="inquire" aria-labelledby="inq-title">
       <div class="wrap inquire__grid">
         <header class="inquire__head">
-          <p class="eyebrow reveal"><span>10</span> Inquire</p>
+          <p class="eyebrow reveal"><span>11</span> Inquire</p>
           <h2 id="inq-title" class="display reveal">Tell me <em>the idea.</em></h2>
           <p class="lede reveal">Drop a few details and I'll get back to you personally. Rough ideas welcome, half-baked ones too.</p>
           <p class="inquire__direct reveal">

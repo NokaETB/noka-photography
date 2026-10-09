@@ -97,6 +97,8 @@
 
   /* ------------------------------------------------------ PRICING (config) */
   var priceList = $('#priceList');
+  // index.html carries a plain copy of the prices (tools/prerender.js); swap in the live version.
+  if (CFG.pricing) priceList.innerHTML = '';
   (CFG.pricing || []).forEach(function (p, i) {
     var li = el('li', 'price-row reveal');
     li.style.setProperty('--d', String(i * 90));
@@ -117,6 +119,7 @@
 
   /* ------------------------------------------------ TESTIMONIALS (config) */
   var testiGrid = $('#testiGrid');
+  if (CFG.testimonials) testiGrid.innerHTML = '';
   var quotes = (CFG.testimonials || []).map(function (t, i) {
     var fig = el('figure', 'quote');
     fig.setAttribute('role', 'group');
@@ -543,4 +546,5 @@
       e.target.setAttribute('aria-invalid', 'false');
     }
   });
+  window.__nokaReady = true;
 })();
