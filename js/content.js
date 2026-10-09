@@ -13,7 +13,6 @@ window.NOKA = {
   site: {
     email: "nokaphotographyllc@gmail.com",
     instagram: "nokakodaks",
-    phone: "401-308-2953",
 
     // INQUIRY FORM
     // "/" sends inquiries to Netlify Forms, which emails them to you (set the
@@ -102,7 +101,7 @@ window.NOKA = {
       placeholder: false
     },
     {
-      quote: "Such an amazing effortless experience everytime. Photographers sometimes don’t go out of their way to make you as comfortable as possible and Zach has always made that his priority and treats you like a best friend while he’s at it. I’ve been lucky to have multiple amazing shoots with him and can’t wait for more!",
+      quote: "Such an amazing effortless experience every time. Photographers sometimes don’t go out of their way to make you as comfortable as possible and Zach has always made that his priority and treats you like a best friend while he’s at it. I’ve been lucky to have multiple amazing shoots with him and can’t wait for more!",
       name: "Isabella",
       detail: "Portrait Sessions · Rhode Island",
       placeholder: false
@@ -150,7 +149,7 @@ window.NOKA = {
       placeholder: false
     },
     {
-      quote: "Zach made the photoshoot experience special every time! He brings an energy that pumps you up with confidence and comfort- which was huge for my first time in front of the camera. Even living in MA I’ll forever seek out Zach for my shoots knowing the photos are perfect every time.",
+      quote: "Zach made the photoshoot experience special every time! He brings an energy that pumps you up with confidence and comfort, which was huge for my first time in front of the camera. Even living in MA I’ll forever seek out Zach for my shoots knowing the photos are perfect every time.",
       name: "Jessica",
       detail: "Couples Sessions · Boston",
       placeholder: false
