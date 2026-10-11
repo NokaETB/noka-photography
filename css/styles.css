@@ -402,10 +402,12 @@ html.js .reveal.is-in {
 .faq__icon::before, .faq__icon::after { content: ""; position: absolute; left: 0; top: 50%; width: 100%; height: 1px; background: currentColor; transition: transform .5s var(--ease); }
 .faq__icon::after { transform: rotate(90deg); }
 .faq__q[aria-expanded="true"] .faq__icon::after { transform: rotate(0); }
-.faq__a { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows .6s var(--ease), visibility .6s; }
+.faq__a { display: grid; grid-template-rows: 1fr; transition: grid-template-rows .6s var(--ease), visibility .6s; }
+/* Answers fold away only once the script is running to open them again. */
+html.js .faq__a { grid-template-rows: 0fr; visibility: hidden; }
 .faq__a > div { overflow: hidden; }
 .faq__a p { padding: 0 clamp(0px, 4vw, 56px) clamp(22px, 2.6vw, 32px) 0; color: var(--mute); max-width: 56ch; }
-.faq__q[aria-expanded="true"] + .faq__a, .faq__item.is-open .faq__a { grid-template-rows: 1fr; visibility: visible; }
+html.js .faq__item.is-open .faq__a { grid-template-rows: 1fr; visibility: visible; }
 
 /* ==========================================================================
    FINAL CTA

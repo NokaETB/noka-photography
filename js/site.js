@@ -430,6 +430,7 @@
     q.addEventListener('click', function () {
       var open = q.getAttribute('aria-expanded') === 'true';
       q.setAttribute('aria-expanded', String(!open));
+      q.closest('.faq__item').classList.toggle('is-open', !open);
     });
   });
 
