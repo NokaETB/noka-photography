@@ -191,7 +191,8 @@ window.NOKA = {
     { id: "beauty",    label: "Beauty" },
     { id: "lifestyle", label: "Lifestyle" },
     { id: "family",    label: "Family" },
-    { id: "studio",    label: "Studio" }
+    { id: "studio",    label: "Studio" },
+    { id: "swimwear",  label: "Swimwear" }
   ],
 
   /* ------------------------------------------------------------------
@@ -287,6 +288,16 @@ window.NOKA = {
     { src: "images/lifestyle-12.jpg"   , cat: "lifestyle" , ratio: "4/5", alt: "Arms out on a playground swing set" },
     { src: "images/family-11.jpg"      , cat: "family"    , ratio: "4/5", alt: "Mom and two sons dressed for the holidays on a covered bridge" },
     { src: "images/studio-09.jpg"      , cat: "studio"    , ratio: "4/5", alt: "Big natural smile, simple studio headshot" },
-    { src: "images/portrait-11.jpg"    , cat: "portraits" , ratio: "3/2", alt: "Laughing in a burgundy hat against green leaves" }
+    { src: "images/portrait-11.jpg"    , cat: "portraits" , ratio: "3/2", alt: "Laughing in a burgundy hat against green leaves" },
+    { src: "images/swimwear-01.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Red bikini, white towel held overhead on the beach" },
+    { src: "images/swimwear-02.jpg"    , cat: "swimwear"  , ratio: "4/5", alt: "Orange bikini, arms raised in front of a breaking wave" },
+    { src: "images/swimwear-03.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Green bikini against a mossy rock wall" },
+    { src: "images/swimwear-04.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Peach bikini on the sand under a clear blue sky" },
+    { src: "images/swimwear-05.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Brown bikini under a dramatic slanted rock ledge" },
+    { src: "images/swimwear-06.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Brown bikini, cowboy hat and boots in a coastal meadow at golden hour" },
+    { src: "images/swimwear-07.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Blue bikini, walking out of the surf" },
+    { src: "images/swimwear-08.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Black bikini on the shoreline rocks" },
+    { src: "images/swimwear-09.jpg"    , cat: "swimwear"  , ratio: "4/5", alt: "On a floating white mattress in calm water at sunset" },
+    { src: "images/swimwear-10.jpg"    , cat: "swimwear"  , ratio: "3/2", alt: "Arms open to the waves at sunset on the beach" }
   ]
 };
