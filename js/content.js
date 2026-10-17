@@ -298,6 +298,6 @@ window.NOKA = {
     { src: "images/swimwear-07.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Blue bikini, walking out of the surf" },
     { src: "images/swimwear-08.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Black bikini on the shoreline rocks" },
     { src: "images/swimwear-09.jpg"    , cat: "swimwear"  , ratio: "4/5", alt: "On a floating white mattress in calm water at sunset" },
-    { src: "images/swimwear-10.jpg"    , cat: "swimwear"  , ratio: "3/2", alt: "Arms open to the waves at sunset on the beach" }
+    { src: "images/lifestyle-13.jpg"   , cat: "lifestyle" , ratio: "3/2", alt: "Arms open to the waves at sunset on the beach" }
   ]
 };
