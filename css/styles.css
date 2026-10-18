@@ -577,3 +577,7 @@ html.js .faq__item.is-open .faq__a { grid-template-rows: 1fr; visibility: visibl
   .svc-grid figure:nth-child(3n+2) { margin-top: 0; }
   .svc-grid figure:nth-child(2n) { margin-top: 40px; }
 }
+
+/* Google review link under testimonials */
+.testi__google { margin-top: 2.2em; text-align: center; }
+.testi__google .link-arrow { color: var(--ink); }
