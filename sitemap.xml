@@ -100,4 +100,40 @@
     <image:image><image:loc>https://nokaphotography.com/images/swimwear-09.jpg</image:loc></image:image>
     <image:image><image:loc>https://nokaphotography.com/images/lifestyle-13.jpg</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://nokaphotography.com/proposals/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <image:image><image:loc>https://nokaphotography.com/images/couple-04.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/couple-08.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/couple-09.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/couple-03.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/couple-11.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/couple-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/couple-06.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://nokaphotography.com/family/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <image:image><image:loc>https://nokaphotography.com/images/family-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/family-03.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/family-05.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/family-08.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/family-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/family-10.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/family-04.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/family-09.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/family-06.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/family-11.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://nokaphotography.com/headshots/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <image:image><image:loc>https://nokaphotography.com/images/studio-09.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/studio-03.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/studio-08.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/studio-05.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/studio-01.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/signature-02.jpg</image:loc></image:image>
+    <image:image><image:loc>https://nokaphotography.com/images/studio-02.jpg</image:loc></image:image>
+  </url>
 </urlset>
