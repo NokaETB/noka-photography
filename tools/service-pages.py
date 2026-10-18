@@ -29,12 +29,15 @@ form_section = between('    <section class="section section--ink inquire"', '   
 faqs = dict(re.findall(r'id="q\d+">(.*?)<span class="faq__icon".*?<div><p>(.*?)</p></div>', home, re.S))
 prices = {p['name']: p for p in cfg['pricing']}
 reviews = {(t['name'], t['detail']): t for t in cfg['testimonials']}
+# Proposal pricing isn't on the homepage; Zach's rate (2026-10-18)
+prices['Proposal'] = dict(name='Proposal', prefix='Starting at', price='$600',
+    note="I capture the question and the yes, then 30 minutes of photos of you two right after.")
 biz = dict(re.findall(r'<h3 class="price-row__name">([^<]*)</h3><div class="price-row__price">(?:<span>Starting at</span>)?<strong>[^<]*</strong></div><p class="price-row__note">([^<]*)</p>', between('<section class="section section--ink2 invest biz"', '</section>')))
 
 PAGES = [
   dict(slug='proposals', session='Proposal',
     title='Rhode Island Proposal Photographer | Noka Photography',
-    desc="Planning a proposal in Rhode Island? Zach Noka stays out of sight, catches the yes, then photographs you two after. Couples sessions from $700.",
+    desc="Planning a proposal in Rhode Island? Zach Noka stays out of sight, catches the yes, then photographs you two after. Proposal sessions from $600.",
     kicker=('Rhode Island', 'Proposal photographer'),
     h1='Rhode Island<br><em>proposal photography.</em>',
     lede="You plan the question. I'll be the guy hiding behind a rock, trying not to cry, and making sure the moment is actually in focus.",
@@ -42,11 +45,11 @@ PAGES = [
     service='Proposal photography',
     statement="You only ask once.<em>So someone should be ready for it.</em>",
     body=["We plan it together before the day: the spot, the timing, the light, and where I'll be so they never see me coming. Pick somewhere that means something to you, or I'll suggest spots that suit the look you want. I'll check the light and logistics beforehand.",
-          "Proposals are booked as a Couples session, so after the yes there's still time for photos of the two of you while you're both glowing."],
+          "After the yes, we take 30 minutes for photos of the two of you while you're both still glowing."],
     steps=[('Plan the moment', 'Spot, timing, light'), ('I stay out of sight', 'They never see me coming'), ('The yes, captured', 'Every reaction, in focus'), ('Photos of you two', 'Right after, while you glow')],
     gallery=[('couple-08.jpg', 'Proposal on the rocks at sunset'), ('couple-09.jpg', 'Her hands and engagement ring cradling his head at sunset on the beach'), ('couple-03.jpg', 'Couple kissing on the beach, engagement ring visible'), ('couple-11.jpg', 'Lifted into a kiss on a tree-lined path'), ('couple-01.jpg', 'Black and white couple kissing beside marble columns'), ('couple-06.jpg', 'Black and white couple on a foggy field')],
     gallery_head='Every yes<br><em>looks different.</em>',
-    price_rows=[('Couples', 'Proposal')],
+    price_rows=[('Proposal', 'Proposal')],
     reviews_head='In their <em>own words.</em>',
     reviews=[('Meghan', 'Engagement & Couples · Narragansett'), ('Jessica', 'Couples Sessions · Boston'), ('Sam', 'Couples Session')],
     faqs=['Can I choose my own location?', 'How many photos do I receive?', 'How long does editing take?', 'Do you travel?', 'What if I need to reschedule?'],
