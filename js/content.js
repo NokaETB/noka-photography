@@ -89,6 +89,12 @@ window.NOKA = {
      ------------------------------------------------------------------ */
   testimonials: [
     {
+      quote: "I’ve had such a great experience working with him! I still remember my very first photoshoot — I was super nervous, but he made me feel comfortable right away and had me laughing the entire time. He has such a great personality and knows exactly how to make you feel confident and relaxed in front of the camera.\n\nHe’s located in Rhode Island, and I literally travel all the way from New York to work with him because he’s THAT good! Every photoshoot has been worth the trip. He’s talented, professional, creative, and makes every experience fun and memorable. You can tell he genuinely loves what he does, and it shows in his work.\n\nIf you’re looking for a photographer who will make you feel comfortable, bring your vision to life, and capture amazing photos, I 100% recommend him! Trust me, the trip from New York to Rhode Island is worth it!",
+      name: "Ana",
+      detail: "Photo Sessions · Travels from New York",
+      placeholder: false
+    },
+    {
       quote: "I’ve never felt my vision come to life the way it does with Zach. He makes you feel so comfortable, and will be your hype man along the way. He works efficiently, and you can trust that you’ll be more than happy when you receive your photos. He also doesn’t keep you out of the dark during the process, and is so open to knowing what it is you want to capture during your shoot with him. Then he makes it happen! 10’s across the board, book him!",
       name: "Tianna",
       detail: "Portrait Session · Narragansett",
@@ -110,6 +116,12 @@ window.NOKA = {
       quote: "Zach is one of the only photographers I bring all my special ideas to, his work is 1000% worth the investment & he’s a great guy to be around. It’s impossible for him to take a bad photo. I look forward to working with him many more times.",
       name: "Jack",
       detail: "Portrait Sessions · Westerly",
+      placeholder: false
+    },
+    {
+      quote: "My first ever photoshoot experience was better than I could’ve imagined! You made me feel so comfortable, confident, and beautiful from start to finish. Your talent is incredible, but the way you make people feel is what truly sets you apart. Thank you for making this experience so special and capturing such amazing photos. I can’t wait to work with you again!",
+      name: "Danielle",
+      detail: "First Photoshoot",
       placeholder: false
     },
     {
@@ -137,6 +149,12 @@ window.NOKA = {
       placeholder: false
     },
     {
+      quote: "I’ve shot with Zach for over 6 years now!! He creates such a comfortable environment. He always has the next idea/pose ready to go and you can tell he truly cares and loves shooting. 10/10!!!",
+      name: "Brianna",
+      detail: "Photo Sessions · 6+ Years",
+      placeholder: false
+    },
+    {
       quote: "The photoshoot turned out amazing, and I’m so happy with the results! He made me feel comfortable throughout the shoot and was flexible and understanding. He was knowledgeable about poses and lighting, which made the whole experience feel easy and natural. Communication was excellent both before and after the shoot. I couldn’t have asked for a better experience or more beautiful photos!",
       name: "Gilana",
       detail: "Portrait Session · Narragansett",
@@ -158,6 +176,12 @@ window.NOKA = {
       quote: "Zach is truly the best!! I’ve known him for over 7 years, and we’ve done so many different shoots together, from lifestyle to maternity and everything in between. He always makes me feel beautiful, comfortable, and confident in front of the camera. He’s great with help for posing & keeps the energy fun! All while being professional and genuinely such a great person. I seriously can not recommend Zach enough 💙",
       name: "Mercedes",
       detail: "Portrait Sessions · Newport",
+      placeholder: false
+    },
+    {
+      quote: "Zach is super kind & helped me feel confident throughout my photoshoot. He’s extremely talented, has a fast turn around time, and is overall a fantastic professional to work with!",
+      name: "Amanda",
+      detail: "Photoshoot",
       placeholder: false
     },
     {
@@ -192,7 +216,8 @@ window.NOKA = {
     { id: "lifestyle", label: "Lifestyle" },
     { id: "family",    label: "Family" },
     { id: "studio",    label: "Studio" },
-    { id: "swimwear",  label: "Swimwear" }
+    { id: "swimwear",  label: "Swimwear" },
+    { id: "business",  label: "Business" }
   ],
 
   /* ------------------------------------------------------------------
@@ -298,6 +323,18 @@ window.NOKA = {
     { src: "images/swimwear-07.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Blue bikini, walking out of the surf" },
     { src: "images/swimwear-08.jpg"    , cat: "swimwear"  , ratio: "2/3", alt: "Black bikini on the shoreline rocks" },
     { src: "images/swimwear-09.jpg"    , cat: "swimwear"  , ratio: "4/5", alt: "On a floating white mattress in calm water at sunset" },
-    { src: "images/lifestyle-13.jpg"   , cat: "lifestyle" , ratio: "3/2", alt: "Arms open to the waves at sunset on the beach" }
+    { src: "images/lifestyle-13.jpg"   , cat: "lifestyle" , ratio: "3/2", alt: "Arms open to the waves at sunset on the beach" },
+    { src: "images/business-01.jpg"    , cat: "business"  , ratio: "3/2", alt: "Kids exploring an indoor play space with wooden play houses" },
+    { src: "images/business-02.jpg"    , cat: "business"  , ratio: "3/2", alt: "Wide view of a bright indoor play space and play cafe" },
+    { src: "images/business-03.jpg"    , cat: "business"  , ratio: "2/3", alt: "Black and white concept shot, reading a salon newspaper in an armchair" },
+    { src: "images/business-04.jpg"    , cat: "business"  , ratio: "2/3", alt: "Three women at an anniversary party in front of a balloon arch" },
+    { src: "images/business-05.jpg"    , cat: "business"  , ratio: "2/3", alt: "Tattoo artist at work under a ring light" },
+    { src: "images/business-06.jpg"    , cat: "business"  , ratio: "2/3", alt: "Iced coffee with fall decor and sprinkles, cafe product photo" },
+    { src: "images/business-07.jpg"    , cat: "business"  , ratio: "2/3", alt: "Smiling brand portrait with arms crossed in a hallway" },
+    { src: "images/business-08.jpg"    , cat: "business"  , ratio: "4/5", alt: "Packing a quilted tote bag on a running track, lifestyle product photo" },
+    { src: "images/business-09.jpg"    , cat: "business"  , ratio: "2/3", alt: "Studio headshot in a branded fitness tank top" },
+    { src: "images/business-10.jpg"    , cat: "business"  , ratio: "3/2", alt: "Auto shop front desk with the logo on a navy wall" },
+    { src: "images/business-11.jpg"    , cat: "business"  , ratio: "4/5", alt: "Mechanic working under the hood in a busy auto shop" },
+    { src: "images/business-12.jpg"    , cat: "business"  , ratio: "4/5", alt: "Four-person team in front of a painted ocean mural storefront" }
   ]
 };
