@@ -95,6 +95,12 @@ window.NOKA = {
       placeholder: false
     },
     {
+      quote: "Noka is absolutely incredible behind the lens! He brings every vision to life no matter how big or small and brings such a skill to the table! Absolutely an incredible experience everytime, he handles each shoot with professionalism and skill bringing every concept to life! 10/10 would recommend to anyone and everyone looking for the right photographer!",
+      name: "Layla",
+      detail: "Photo Sessions · Rhode Island",
+      placeholder: false
+    },
+    {
       quote: "I’ve never felt my vision come to life the way it does with Zach. He makes you feel so comfortable, and will be your hype man along the way. He works efficiently, and you can trust that you’ll be more than happy when you receive your photos. He also doesn’t keep you out of the dark during the process, and is so open to knowing what it is you want to capture during your shoot with him. Then he makes it happen! 10’s across the board, book him!",
       name: "Tianna",
       detail: "Portrait Session · Narragansett",
