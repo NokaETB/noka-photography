@@ -67,7 +67,7 @@ After changing prices or testimonials, run `node tools/prerender.js`. It copies 
 **Add a photo:** copy one gallery line in `content.js`, change `src`, `cat`, `ratio`, `alt`. Add the file to `images/`.
 **Remove a photo:** delete its line.
 
-**Change prices:** edit `price: "$XX"` in the `pricing` section (e.g. `"$250"`). For Events, edit or keep "Custom Quote".
+**Change prices:** edit `price` and `note` in the `pricing` section of `js/content.js`, then run `node tools/prerender.js` and `python3 tools/service-pages.py`. Business rows (Team Headshots, Business Events) live in the For Businesses section of `index.html`.
 
 **Add real testimonials:** edit `quote`, `name`, `detail` and set `placeholder: false`. The "Placeholder" label disappears.
 

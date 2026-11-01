@@ -19,6 +19,12 @@
     return n;
   }
 
+  /* ------------------------------------------- DATED NOTES (data-until) */
+  // e.g. the 2027 pricing banner: removed automatically from that date on.
+  $$('[data-until]').forEach(function (n) {
+    if (new Date() >= new Date(n.getAttribute('data-until') + 'T00:00:00')) n.parentNode.removeChild(n);
+  });
+
   /* ---------------------------------------------------------------- NAV */
   var nav = $('#nav');
   var menu = $('#menu');

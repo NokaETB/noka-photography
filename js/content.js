@@ -24,58 +24,87 @@ window.NOKA = {
 
   /* ------------------------------------------------------------------
      2. INVESTMENT / PRICING
-     Change "$XX" to your real starting prices whenever you like.
+     2027 rates (from Zach's 2027 pricing sheet, Nov 1, 2026).
      For a custom quote, set prefix to "" and price to "Custom Quote".
+     session: the inquiry-form option the "Inquire" link picks (defaults to name).
+     cta: false hides the "Inquire" link (used for add-ons).
      Add, remove or reorder rows freely.
      ------------------------------------------------------------------ */
   pricing: [
     {
-      name: "Portrait Session",
-      note: "1 hour at the location of your choice, 2 outfits and at least 25 fully edited photos. Want more? 2 hours, multiple locations, 3 outfits and at least 40 photos for $600.",
-      prefix: "Starting at",
-      price: "$400"
+      name: "Signature Session",
+      note: "Best for a fresh profile shot, a birthday or your first shoot. 1 hour at one location, concept planning by DM before the shoot (mood board, outfits, location), 25 edited images and an online gallery delivered in 5–7 days.",
+      prefix: "",
+      price: "$500"
+    },
+    {
+      name: "Editorial Session",
+      note: "Best for a full editorial story with real variety. 2 hours with multiple locations or looks, concept planning by DM plus a shot list, 40 edited images and an online gallery delivered in 5–7 days.",
+      prefix: "",
+      price: "$750"
+    },
+    {
+      name: "Premium Editorial Concept",
+      note: "A fully styled creative shoot built around your idea. Ask for the offer sheet.",
+      prefix: "From",
+      price: "$1,200"
+    },
+    {
+      name: "Concept Studio Session",
+      note: "Winter studio days only. 25 minutes in studio. Bring your concept, I bring the light. 10 edited images. Dates announced on Instagram.",
+      prefix: "",
+      price: "$250"
+    },
+    {
+      name: "Mini Session",
+      note: "Seasonal outdoor dates only. 25 minutes, 10 edited images. Dates announced on Instagram.",
+      prefix: "",
+      price: "$250"
+    },
+    {
+      name: "Portrait Add-ons",
+      note: "+5 edited images $75. Full edited gallery $150. Extra look or outfit change (Signature only) $75. Rush delivery in 72 hours $50. Hair and makeup arranged on request, paid to the artist directly.",
+      prefix: "From",
+      price: "$50",
+      cta: false
     },
     {
       name: "Couples",
-      note: "1 hour at one location and at least 25 fully retouched photos of you two. Or go big: 2 hours, two locations and at least 40 photos for $1,000.",
+      note: "Best for anniversaries, engagements and date-night portraits. 1 hour at one location of your choice, a minimum of 25 fully edited photos, full retouching and an online gallery in 7 days. Or, for save-the-dates and a full story of the two of you: 2 hours, two locations of your choice and a minimum of 40 photos for $1,200.",
       prefix: "Starting at",
-      price: "$700"
-    },
-    {
-      name: "Graduation",
-      note: "Your moment, done right. 1 hour solo at the location of your choice, cap and gown plus 2 outfits. Or 2 hours, two locations and 3 outfits for $650. Grad groups from $175 per person.",
-      prefix: "Starting at",
-      price: "$450"
+      price: "$850"
     },
     {
       name: "Family",
-      note: "1 hour at one location for up to 5 people and at least 30 fully edited photos. Or 2 hours, two locations, up to 8 people and at least 50 photos for $850. Extra family members are $30 each.",
+      note: "Best for your yearly family photos and holiday cards. 1 hour at one location of your choice for up to 5 people, a minimum of 30 fully edited photos and an online gallery in 7 days. Or, for bigger families and multi-generation photos: 2 hours, two locations, up to 8 people and a minimum of 50 photos for $1,050. Each additional person is $30.",
       prefix: "Starting at",
-      price: "$700"
+      price: "$850"
+    },
+    {
+      name: "Graduation",
+      note: "Best for announcements, grad party displays and a quick milestone. 1 hour at one location of your choice, cap & gown plus 2 outfits, a minimum of 25 fully edited photos and an online gallery in 7 days. Or tell the whole story: 2 hours, two locations, cap & gown plus 3 outfits and a minimum of 40 photos for $800. Want a friend or family member in a few shots? Add them for $50.",
+      prefix: "Starting at",
+      price: "$550"
+    },
+    {
+      name: "Graduation Groups",
+      note: "Rates are per person. Small group (2–4): $325 per person for 1.5 hours at the location of your choice, with a minimum of 5 solo + 10 group photos each. Large group (5+): $200 per person for 2 hours at the location(s) of your choice, with a minimum of 5 solo + 10 group photos each. A non-refundable $50 deposit holds your date (refunded if I have to cancel due to weather).",
+      prefix: "Per person, from",
+      price: "$200",
+      session: "Graduation Group"
     },
     {
       name: "Headshots",
-      note: "Look like you mean business. 30 minutes, one look and at least 5 fully retouched photos. Or 60 minutes, up to 3 looks and at least 12 photos for $300. Teams of 3 or more are $150 per person, at your office.",
+      note: "Best for a quick LinkedIn, résumé or profile update: 30 minutes, one look and a minimum of 5 fully retouched photos, on location indoors or out, ready within 7 days. For founders, creatives and a full personal-brand refresh: 60 minutes, up to 3 looks and a minimum of 12 photos for $375. Teams of 3 or more are $175 per person, and I'll come to your office.",
       prefix: "Starting at",
-      price: "$175"
-    },
-    {
-      name: "Groups",
-      note: "Friends, teams, clubs and celebrations. 1 hour for up to 10 people and at least 30 photos. Or 2 hours, two locations, up to 15 people and at least 50 photos for $1,000. Extra people are $40 each.",
-      prefix: "Starting at",
-      price: "$700"
+      price: "$200"
     },
     {
       name: "Events",
-      note: "Birthdays, parties and business events, captured with actual energy. 3 hours of coverage and at least 120 fully edited photos. Or 5 hours and at least 200 photos for $1,200. Extra hours are $150.",
+      note: "Best for birthdays, showers and smaller gatherings: 3 hours at your event, a minimum of 120 fully edited photos, candids and group shots, and a gallery within 10 days. For milestone parties and business events: 5 hours and a minimum of 200 photos for $1,450. Need more time? Extra hours are $175 each.",
       prefix: "Starting at",
-      price: "$800"
-    },
-    {
-      name: "Editorial / Creative",
-      note: "Got a big idea? Let's build it. Concept-led shoots are priced around the concept, styling and scope.",
-      prefix: "",
-      price: "Custom Quote"
+      price: "$950",
+      session: "Event"
     }
   ],
 

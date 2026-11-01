@@ -347,6 +347,8 @@ html.js .reveal.is-in {
 .invest__head { grid-column: 1 / 6; display: grid; gap: 28px; position: sticky; top: calc(var(--nav-h) + 40px); }
 .invest__head .display { margin-top: 4px; }
 .invest__note { font-size: .85rem; color: var(--mute); letter-spacing: .02em; }
+.price-banner { border: 1px solid var(--line); padding: 16px 20px; font-size: .92rem; line-height: 1.55; }
+.price-banner strong { font-weight: 500; }
 .price-list { grid-column: 7 / 13; border-top: 1px solid var(--line); }
 .price-row {
   display: grid; grid-template-columns: 1fr auto; gap: 6px 24px; align-items: end;

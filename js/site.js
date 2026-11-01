@@ -20,6 +20,12 @@
     return n;
   }
 
+  /* ------------------------------------------- DATED NOTES (data-until) */
+  // e.g. the 2027 pricing banner: removed automatically from that date on.
+  $$('[data-until]').forEach(function (n) {
+    if (new Date() >= new Date(n.getAttribute('data-until') + 'T00:00:00')) n.parentNode.removeChild(n);
+  });
+
   /* ---------------------------------------------------------------- NAV */
   var nav = $('#nav');
   var menu = $('#menu');
@@ -108,11 +114,13 @@
     price.appendChild(el('strong', '', p.price));
     li.appendChild(price);
     li.appendChild(el('p', 'price-row__note', p.note || ''));
-    var cta = el('a', 'price-row__cta', p.price && /quote/i.test(p.price) ? 'Request a quote' : 'Inquire');
-    cta.href = '#inquire';
-    cta.setAttribute('data-inquire', '');
-    cta.setAttribute('data-session', p.name === 'Events' ? 'Event' : p.name);
-    li.appendChild(cta);
+    if (p.cta !== false) {
+      var cta = el('a', 'price-row__cta', p.price && /quote/i.test(p.price) ? 'Request a quote' : 'Inquire');
+      cta.href = '#inquire';
+      cta.setAttribute('data-inquire', '');
+      cta.setAttribute('data-session', p.session || (p.name === 'Events' ? 'Event' : p.name));
+      li.appendChild(cta);
+    }
     priceList.appendChild(li);
     if (window.__revealObserver) window.__revealObserver.observe(li); else li.classList.add('is-in');
   });

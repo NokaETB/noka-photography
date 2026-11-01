@@ -32,7 +32,10 @@ reviews = {(t['name'], t['detail']): t for t in cfg['testimonials']}
 # Proposal pricing isn't on the homepage; Zach's rate (2026-10-18)
 prices['Proposal'] = dict(name='Proposal', prefix='Starting at', price='$600',
     note="I capture the question and the yes, then 15 minutes of photos of you two right after.")
-biz = dict(re.findall(r'<h3 class="price-row__name">([^<]*)</h3><div class="price-row__price">(?:<span>Starting at</span>)?<strong>[^<]*</strong></div><p class="price-row__note">([^<]*)</p>', between('<section class="section section--ink2 invest biz"', '</section>')))
+# The 2027 pricing banner and deposit note come from the homepage's Investment section.
+banner = re.search(r'          <p class="price-banner.*?</p>\n', home).group(0)
+invest_note = re.search(r'          <p class="invest__note reveal">.*?</p>\n', between('<section class="section section--ink invest"', '</section>')).group(0)
+biz = dict(re.findall(r'<h3 class="price-row__name">([^<]*)</h3><div class="price-row__price">(?:<span>[^<]*</span>)?<strong>[^<]*</strong></div><p class="price-row__note">([^<]*)</p>', between('<section class="section section--ink2 invest biz"', '</section>')))
 
 PAGES = [
   dict(slug='proposals', session='Proposal',
@@ -56,7 +59,7 @@ PAGES = [
   ),
   dict(slug='family', session='Family',
     title='Rhode Island Family Photographer | Maternity &amp; Newborn | Noka Photography',
-    desc="Family, maternity and newborn photos in Rhode Island by Zach Noka. Directed, relaxed sessions on the beach, in a field or in studio. From $700.",
+    desc="Family, maternity and newborn photos in Rhode Island by Zach Noka. Directed, relaxed sessions on the beach, in a field or in studio. From $850.",
     kicker=('Rhode Island', 'Family / Maternity / Newborn'),
     h1='Rhode Island<br><em>family photography.</em>',
     lede="Real hugs, little ones who won't sit still, and photos you'll actually want on the wall.",
@@ -75,7 +78,7 @@ PAGES = [
   ),
   dict(slug='headshots', session='Headshots',
     title='Headshot &amp; Business Photographer in Rhode Island | Noka Photography',
-    desc="Headshots, team headshots at your office, business events and brand photography in Providence and across Rhode Island. Headshots from $175, teams $150 per person.",
+    desc="Headshots, team headshots at your office, business events and brand photography in Providence and across Rhode Island. Headshots from $200, teams $175 per person.",
     kicker=('Providence / Rhode Island', 'Headshots &amp; business'),
     h1='Headshots &amp; business<br><em>photography in Rhode Island.</em>',
     lede="Look like you mean business. Headshots for you or your whole team, events captured with actual energy, and images for your brand.",
@@ -84,7 +87,7 @@ PAGES = [
     statement="Your photo is the first meeting.<em>Make it a good one.</em>",
     body=["Same direction and full retouching every client gets, whether it's one new headshot for LinkedIn or the whole team at your office.",
           "Restaurants and caf&eacute;s, salons and barbershops, boutiques, auto shops and local brands: I also shoot events and brand content. Businesses can pay by invoice. You get a written quote up front and an itemized invoice, and how you'll use the photos is agreed before the shoot."],
-    steps=[('Individual headshots', 'From $175'), ('Team headshots', '$150 per person, 3 or more'), ('Business events', 'From $800'), ('Brand &amp; campaign', 'Custom quote')],
+    steps=[('Individual headshots', 'From $200'), ('Team headshots', '$175 per person, 3 or more'), ('Business events', 'From $950'), ('Brand &amp; campaign', 'Custom quote')],
     gallery=[('studio-03.jpg', 'Studio portrait of a man, hand on face'), ('studio-08.jpg', 'Holding nail color swatches over one eye, studio portrait'), ('studio-05.jpg', 'Black and white studio portrait on a stool'), ('studio-01.jpg', 'Laughing studio portrait in ripped jeans'), ('signature-02.jpg', 'Editorial portrait in a leather jacket, looking up at the camera'), ('studio-02.jpg', 'Standing with a guitar in the studio, cream outfit')],
     gallery_head='Clean, confident<br><em>and actually you.</em>',
     price_rows=[('Headshots', 'Headshots'), ('Team Headshots', 'Headshots'), ('Business Events', 'Event'), ('Brand &amp; Campaign', 'Business / Brand')],
@@ -225,10 +228,9 @@ def build(pg):
     <section class="section section--ink2 invest" aria-labelledby="inv-title">
       <div class="wrap invest__grid">
         <header class="invest__head">
-          <p class="eyebrow reveal"><span>03</span> Investment</p>
+{banner}          <p class="eyebrow reveal"><span>03</span> Investment</p>
           <h2 id="inv-title" class="display reveal">Tailored to <em>the vision.</em></h2>
-          <p class="invest__note reveal">A non-refundable deposit locks in your date and comes off your total. Within 25 miles of Providence? No travel fee.</p>
-        </header>
+{invest_note}        </header>
         <ul class="price-list">
 {chr(10).join(price_row(n, s) for n, s in pg['price_rows'])}
         </ul>

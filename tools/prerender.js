@@ -15,7 +15,7 @@ var pricing = CFG.pricing.map(function (p) {
     '<h3 class="price-row__name">' + esc(p.name) + '</h3>' +
     '<div class="price-row__price">' + (p.prefix ? '<span>' + esc(p.prefix) + '</span>' : '') + '<strong>' + esc(p.price) + '</strong></div>' +
     '<p class="price-row__note">' + esc(p.note || '') + '</p>' +
-    '<a class="price-row__cta" href="#inquire" data-inquire data-session="' + esc(p.name === 'Events' ? 'Event' : p.name) + '">' + (quote ? 'Request a quote' : 'Inquire') + '</a></li>';
+    (p.cta === false ? '' : '<a class="price-row__cta" href="#inquire" data-inquire data-session="' + esc(p.session || (p.name === 'Events' ? 'Event' : p.name)) + '">' + (quote ? 'Request a quote' : 'Inquire') + '</a>') + '</li>';
 }).join('\n');
 
 var reviews = CFG.testimonials.map(function (t, i) {
