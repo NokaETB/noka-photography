@@ -88,7 +88,7 @@ window.NOKA = {
     },
     {
       name: "Graduation Groups",
-      note: "Rates are per person. Small group (2–4): $325 per person for 1.5 hours at the location of your choice, with a minimum of 5 solo + 10 group photos each. Large group (5+): $200 per person for 2 hours at the location(s) of your choice, with a minimum of 5 solo + 10 group photos each. A non-refundable $50 deposit holds your date (refunded if I have to cancel due to weather).",
+      note: "Rates are per person. Solo: $550 for 1 hour at the location of your choice, with a minimum of 25 fully edited photos. Small group (2–4): $325 per person for 1.5 hours at the location of your choice, with a minimum of 5 solo + 10 group photos each. Large group (5+): $200 per person for 2 hours at the location(s) of your choice, with a minimum of 5 solo + 10 group photos each. A non-refundable $50 deposit holds your date (refunded if I have to cancel due to weather).",
       prefix: "Per person, from",
       price: "$200",
       session: "Graduation Group"
