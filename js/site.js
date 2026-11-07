@@ -285,6 +285,13 @@
     btn.type = 'button';
     btn.setAttribute('aria-label', 'View larger: ' + (it.alt || 'portfolio image'));
     var img = new Image();
+    // Smaller WebP/AVIF copies via Netlify Image CDN on the live site; falls back to the original file.
+    if (/nokaphotography\.com$/.test(location.hostname) && /^images\/[\w-]+\.jpg$/.test(it.src)) {
+      var cdn = function (w) { return '/.netlify/images?url=/' + it.src + '&w=' + w + '&q=80 ' + w + 'w'; };
+      img.sizes = '(max-width: 699px) 100vw, (max-width: 1049px) 50vw, 33vw';
+      img.srcset = [cdn(480), cdn(800), cdn(1200)].join(', ');
+      img.onerror = function () { img.onerror = null; img.removeAttribute('srcset'); img.removeAttribute('sizes'); img.src = it.src; };
+    }
     img.src = it.src;
     img.alt = it.alt || '';
     img.loading = 'lazy';

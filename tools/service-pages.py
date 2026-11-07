@@ -77,7 +77,7 @@ PAGES = [
     faqs=['Do you help with posing?', 'Can I choose my own location?', 'How many photos do I receive?', 'How long does editing take?', 'Do you travel?', 'What if I need to reschedule?'],
   ),
   dict(slug='headshots', session='Headshots',
-    title='Headshot &amp; Business Photographer in Rhode Island | Noka Photography',
+    title='Headshot, Branding &amp; Business Photographer in Rhode Island | Noka Photography',
     desc="Headshots, team headshots at your office, business events and brand photography in Providence and across Rhode Island. Headshots from $200, teams $175 per person.",
     kicker=('Providence / Rhode Island', 'Headshots &amp; business'),
     h1='Headshots &amp; business<br><em>photography in Rhode Island.</em>',
