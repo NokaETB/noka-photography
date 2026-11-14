@@ -377,12 +377,12 @@ window.NOKA = {
     { src: "images/boudoir-03.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black lace slip in front of a gold-framed mirror" },
     { src: "images/boudoir-04.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Glasses and an open black shirt in warm late-day window light" },
     { src: "images/boudoir-05.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black and white, resting on white pillows and sheets" },
-    { src: "images/boudoir-06.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Pale blue corset on a dark sofa in front of a sunlit window" },
+    { src: "images/boudoir-06.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Lingerie in a timber-framed cabin interior" },
     { src: "images/boudoir-07.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Laughing in a clawfoot tub by the bathroom window" },
     { src: "images/boudoir-08.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Copper satin slip and robe in a home kitchen" },
-    { src: "images/boudoir-09.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Red lingerie with a sheer red robe spread wide, white studio" },
+    { src: "images/boudoir-09.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black bodysuit, kneeling on a bed in soft window light" },
     { src: "images/boudoir-10.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Floral lace bra, leaning out of an open window" },
     { src: "images/boudoir-11.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black lace on a red velvet sofa with a vintage lamp" },
-    { src: "images/boudoir-12.jpg"     , cat: "boudoir"   , ratio: "4/5", alt: "Red lingerie holding pink roses against a red backdrop" }
+    { src: "images/boudoir-12.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "White lace, seated on the floor of a bright room with white shelves" }
   ]
 };
