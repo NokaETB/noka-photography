@@ -381,8 +381,8 @@ window.NOKA = {
     { src: "images/boudoir-07.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Laughing in a clawfoot tub by the bathroom window" },
     { src: "images/boudoir-08.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Copper satin slip and robe in a home kitchen" },
     { src: "images/boudoir-09.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black bodysuit, kneeling on a bed in soft window light" },
-    { src: "images/boudoir-10.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Floral lace bra, leaning out of an open window" },
-    { src: "images/boudoir-11.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black lace on a red velvet sofa with a vintage lamp" },
+    { src: "images/boudoir-10.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Red stockings and heels kicked up over a cream sofa" },
+    { src: "images/boudoir-11.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black bra and open jacket against city lights at night" },
     { src: "images/boudoir-12.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "White lace, seated on the floor of a bright room with white shelves" }
   ]
 };
