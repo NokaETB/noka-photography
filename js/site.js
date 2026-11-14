@@ -260,8 +260,8 @@
   /* -------------------------------------------------- GALLERY (config) */
   var items = CFG.gallery || [];
   var cats = CFG.categories || [];
-  var catLabel = {};
-  cats.forEach(function (c) { catLabel[c.id] = c.label; });
+  var catLabel = {}, hideInAll = {};
+  cats.forEach(function (c) { catLabel[c.id] = c.label; if (c.hideInAll) hideInAll[c.id] = true; });
 
   var masonry = $('#masonry');
   var filtersEl = $('#filters');
@@ -317,7 +317,7 @@
     var n = colCount();
     var cols = [], heights = [];
     for (var i = 0; i < n; i++) { cols.push(el('div', 'masonry__col')); heights.push(0); }
-    visible = figures.filter(function (f) { return activeCat === 'all' || f.data.cat === activeCat; });
+    visible = figures.filter(function (f) { return activeCat === 'all' ? !hideInAll[f.data.cat] : f.data.cat === activeCat; });
     visible.forEach(function (f, i) {
       var k = heights.indexOf(Math.min.apply(null, heights));
       f.node.style.setProperty('--i', animate ? String(Math.min(i, 12)) : '0');

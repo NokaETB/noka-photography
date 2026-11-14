@@ -252,7 +252,8 @@ window.NOKA = {
     { id: "family",    label: "Family" },
     { id: "studio",    label: "Studio" },
     { id: "swimwear",  label: "Swimwear" },
-    { id: "business",  label: "Business" }
+    { id: "business",  label: "Business" },
+    { id: "boudoir",   label: "Boudoir", hideInAll: true }   // only shows when its tab is picked
   ],
 
   /* ------------------------------------------------------------------
@@ -370,6 +371,18 @@ window.NOKA = {
     { src: "images/business-09.jpg"    , cat: "business"  , ratio: "2/3", alt: "Studio headshot in a branded fitness tank top" },
     { src: "images/business-10.jpg"    , cat: "business"  , ratio: "3/2", alt: "Auto shop front desk with the logo on a navy wall" },
     { src: "images/business-11.jpg"    , cat: "business"  , ratio: "4/5", alt: "Mechanic working under the hood in a busy auto shop" },
-    { src: "images/business-12.jpg"    , cat: "business"  , ratio: "4/5", alt: "Four-person team in front of a painted ocean mural storefront" }
+    { src: "images/business-12.jpg"    , cat: "business"  , ratio: "4/5", alt: "Four-person team in front of a painted ocean mural storefront" },
+    { src: "images/boudoir-01.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Red lace lingerie on a red blanket scattered with pink roses" },
+    { src: "images/boudoir-02.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Wrapped in a floral sheet on a bed beside a palm, soft window light" },
+    { src: "images/boudoir-03.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black lace slip in front of a gold-framed mirror" },
+    { src: "images/boudoir-04.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Glasses and an open black shirt in warm late-day window light" },
+    { src: "images/boudoir-05.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black and white, resting on white pillows and sheets" },
+    { src: "images/boudoir-06.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Pale blue corset on a dark sofa in front of a sunlit window" },
+    { src: "images/boudoir-07.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Laughing in a clawfoot tub by the bathroom window" },
+    { src: "images/boudoir-08.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Copper satin slip and robe in a home kitchen" },
+    { src: "images/boudoir-09.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Red lingerie with a sheer red robe spread wide, white studio" },
+    { src: "images/boudoir-10.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Floral lace bra, leaning out of an open window" },
+    { src: "images/boudoir-11.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black lace on a red velvet sofa with a vintage lamp" },
+    { src: "images/boudoir-12.jpg"     , cat: "boudoir"   , ratio: "4/5", alt: "Red lingerie holding pink roses against a red backdrop" }
   ]
 };
