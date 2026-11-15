@@ -588,3 +588,124 @@ html.js .faq__item.is-open .faq__a { grid-template-rows: 1fr; visibility: visibl
 /* Google review link under testimonials */
 .testi__google { margin-top: 2.2em; text-align: center; }
 .testi__google .link-arrow { color: var(--ink); }
+
+/* ==========================================================================
+   MOTION & POLISH (Nov 2026)
+   One photographic idea carried through the page: images "develop" upward
+   into their frames, headings rise line by line like the hero, and the
+   rate card rules itself in as you read it. Everything else only moves
+   when you do something (hover, filter, open a photo).
+   ========================================================================== */
+
+/* ---------- typography refinements ---------- */
+h1, h2, h3, .statement, .price-row__name { text-wrap: balance; }
+p, li, blockquote { text-wrap: pretty; }
+.quote__text { hanging-punctuation: first; }
+
+/* ---------- photographs develop into their frames ---------- */
+html.js .mask img {
+  clip-path: inset(100% 0 0 0);
+  transition: transform 1.9s var(--ease), clip-path 1.25s cubic-bezier(.65, 0, .2, 1);
+}
+html.js .mask.is-in img, html.js .reveal.is-in .mask img, html.js .reveal.is-in.mask img { clip-path: inset(0 0 0 0); }
+/* tiles: the label follows the photo up */
+html.js .tile .tile__label { opacity: 0; transform: translateY(14px); transition: opacity .9s var(--ease) .55s, transform 1s var(--ease) .55s; }
+html.js .tile.is-in .tile__label { opacity: 1; transform: none; }
+
+/* ---------- headings rise line by line (split by js/motion.js) ---------- */
+html.js .reveal.split { opacity: 1; transform: none; }
+.split .line { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
+.split .line > span { display: block; transform: translateY(108%); transition: transform 1.25s var(--ease) calc(var(--l, 0) * 120ms + var(--d, 0) * 1ms); }
+.split.is-in .line > span { transform: none; }
+
+/* ---------- rate card: hairlines draw in as each row arrives ---------- */
+.price-row { position: relative; border-bottom: 0; }
+.price-row::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--line);
+  transform-origin: left; transition: transform 1.4s var(--ease) calc(var(--d, 0) * 1ms + 200ms);
+}
+html.js .price-row.reveal::after { transform: scaleX(0); }
+html.js .price-row.reveal.is-in::after { transform: scaleX(1); }
+.price-row__price strong { transition: letter-spacing .6s var(--ease); }
+.price-row__cta { display: inline-flex; gap: .6em; align-items: center; transition: opacity .3s, gap .45s var(--ease); }
+.price-row__cta::after { content: "→"; font-size: .9rem; letter-spacing: 0; transition: transform .45s var(--ease); }
+.price-banner { position: relative; overflow: hidden; }
+.price-banner::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--paper); }
+
+@media (hover: hover) {
+  .price-row:hover .price-row__cta { opacity: 1; gap: 1em; }
+  .price-row:hover::after { background: var(--paper); }
+  .price-row::after { transition-property: transform, background-color; }
+}
+
+/* ---------- buttons: the fill wipes up from below ---------- */
+.btn { position: relative; isolation: isolate; overflow: hidden; }
+.btn--solid-light { --b-hbg: var(--ink); }
+@media (hover: hover) {
+  .btn::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; background: var(--b-hbg);
+    transform: scaleY(0); transform-origin: bottom; transition: transform .55s var(--ease);
+  }
+  .btn:hover { background: var(--b-bg); }
+  .btn:hover::before { transform: scaleY(1); }
+}
+.btn:active { transform: translateY(1px); }
+
+/* ---------- nav: reading progress + current section ---------- */
+.nav__progress {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: rgba(241, 238, 232, .55);
+  transform: scaleX(0); transform-origin: left; opacity: 0; transition: opacity .5s;
+}
+.nav.is-solid .nav__progress { opacity: 1; }
+.nav__links a[aria-current="true"]::after { transform: scaleX(1); transform-origin: left; }
+
+/* ---------- portfolio: one underline slides between filters ---------- */
+.filters { position: relative; }
+.filters.has-bar .filter::after { display: none; }
+.filters__bar {
+  position: absolute; left: 0; top: 0; height: 1px; width: 0; background: var(--paper); pointer-events: none;
+  transition: transform .6s var(--ease), width .6s var(--ease), top .3s;
+}
+.shot img { transition: transform 1.5s var(--ease), opacity .6s, filter .6s; }
+@media (hover: hover) {
+  .masonry:has(.shot:hover) .shot:not(:hover) img { opacity: .55; }
+}
+
+/* ---------- lightbox: photos crossfade, the first one settles in ---------- */
+.lightbox__fig img { transition: opacity .35s var(--ease), transform .6s var(--ease); }
+.lightbox[open] .lightbox__fig img { animation: lbImgIn .7s var(--ease); }
+.lightbox__fig img.is-swapping { opacity: 0; transform: scale(.985); transition-duration: .01s; }
+@keyframes lbImgIn { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
+
+/* ---------- tiles: name opens up on hover ---------- */
+.tile__name { transition: letter-spacing .7s var(--ease); }
+@media (hover: hover) { .tile:hover .tile__name { letter-spacing: .08em; } }
+
+/* ---------- scroll-linked depth (browsers that support it; no JS) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .sig__b { animation: drift linear both; animation-timeline: view(); animation-range: entry 0% exit 100%; }
+    .cta__media img { animation: settle linear both; animation-timeline: view(); animation-range: entry 0% cover 60%; }
+    .about__figure, .intro__figure { animation: driftSoft linear both; animation-timeline: view(); animation-range: entry 0% exit 100%; }
+    @keyframes drift { from { translate: 0 60px; } to { translate: 0 -60px; } }
+    @keyframes driftSoft { from { translate: 0 30px; } to { translate: 0 -30px; } }
+    @keyframes settle { from { scale: 1.16; } to { scale: 1; } }
+  }
+}
+
+/* ---------- phone polish ---------- */
+@media (max-width: 699px) {
+  .price-row__cta { padding-block: 12px 6px; margin-top: 4px; }
+  .price-row__name { font-size: clamp(1.75rem, 8vw, 2.2rem); }
+  .price-row__price strong { font-size: 1.6rem; }
+  .invest__note { font-size: .9rem; line-height: 1.7; }
+  .filters { padding-bottom: 16px; }
+  .hero__kicker { gap: 6px; text-shadow: 0 1px 12px rgba(0, 0, 0, .45); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .mask img { clip-path: none; }
+  html.js .tile .tile__label { opacity: 1; transform: none; }
+  html.js .price-row.reveal::after { transform: none; }
+  .split .line > span { transform: none; }
+}
