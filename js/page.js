@@ -150,6 +150,18 @@
     return ok;
   }
 
+  // Accepts "handle", "@handle" or an instagram.com link and stores it as "@handle".
+  function normalizeInstagram() {
+    var input = form.elements.instagram;
+    if (!input) return;
+    var v = input.value.trim()
+      .replace(/^(https?:\/\/)?(www\.)?(instagram\.com|instagr\.am)\//i, '')
+      .replace(/[/?#].*$/, '')
+      .replace(/^@+/, '')
+      .replace(/\s+/g, '');
+    input.value = v ? '@' + v : '';
+  }
+
   function setStatus(msg, kind) {
     statusEl.className = 'form__status' + (kind ? ' is-' + kind : '');
     statusEl.textContent = '';
@@ -161,13 +173,14 @@
     var lines = [
       'Name: ' + data.name,
       'Email: ' + data.email,
+      data.instagram ? 'Instagram: ' + data.instagram : '',
       data.phone ? 'Phone: ' + data.phone : '',
       'Session type: ' + data.session,
       data.timing ? 'Ideal timing: ' + data.timing : '',
       data.location ? 'Location idea: ' + data.location : '',
       '',
       data.message
-    ].filter(function (l, i) { return l !== '' || i === 6; });
+    ].filter(function (l, i) { return l !== '' || i === 7; });
     var href = 'mailto:' + SITE.email + '?subject=' + encodeURIComponent('Session inquiry: ' + data.session) +
       '&body=' + encodeURIComponent(lines.join('\n'));
     window.location.href = href;
@@ -178,9 +191,10 @@
     setStatus('');
     if (form.elements.website.value) return; // honeypot
     if (!validate()) return;
+    normalizeInstagram();
 
     var data = {};
-    ['name', 'email', 'phone', 'session', 'timing', 'location', 'message'].forEach(function (k) {
+    ['name', 'email', 'instagram', 'phone', 'session', 'timing', 'location', 'message'].forEach(function (k) {
       data[k] = form.elements[k].value.trim();
     });
 
