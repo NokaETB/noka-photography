@@ -301,14 +301,14 @@ window.NOKA = {
     { src: "images/couple-04.jpg"      , cat: "couples"   , ratio: "2/3", alt: "Silhouetted proposal on the beach at sunset" },
     { src: "images/beauty-04.jpg"      , cat: "beauty"    , ratio: "4/5", alt: "Curly blonde hair in warm light, close portrait" },
     { src: "images/lifestyle-04.jpg"   , cat: "lifestyle" , ratio: "4/5", alt: "Curly hair profile at the ocean in golden light" },
-    { src: "images/family-04.jpg"      , cat: "family"    , ratio: "2/3", alt: "Maternity silhouette against a red sunset" },
+    { src: "images/family-04.jpg"      , cat: "maternity" , ratio: "2/3", alt: "Maternity silhouette against a red sunset" },
     { src: "images/studio-04.jpg"      , cat: "studio"    , ratio: "2/3", alt: "Studio portrait in a black top and tights" },
     { src: "images/portrait-05.jpg"    , cat: "portraits" , ratio: "2/3", alt: "Curly-haired woman on an ocean cliff" },
     { src: "images/editorial-05.jpg"   , cat: "editorial" , ratio: "2/3", alt: "Dark fairy with white hair and a jeweled crown behind iron gates" },
     { src: "images/couple-05.jpg"      , cat: "couples"   , ratio: "2/3", alt: "Couple with a rusty blue vintage truck" },
     { src: "images/beauty-05.jpg"      , cat: "beauty"    , ratio: "2/3", alt: "Black and white portrait with hoop earrings" },
     { src: "images/lifestyle-05.jpg"   , cat: "lifestyle" , ratio: "3/2", alt: "Five friends in satin slips posed together against autumn trees" },
-    { src: "images/family-05.jpg"      , cat: "family"    , ratio: "2/3", alt: "Maternity portrait on the beach at sunset" },
+    { src: "images/family-05.jpg"      , cat: "maternity" , ratio: "2/3", alt: "Maternity portrait on the beach at sunset" },
     { src: "images/studio-05.jpg"      , cat: "studio"    , ratio: "2/3", alt: "Black and white studio portrait on a stool" },
     { src: "images/portrait-06.jpg"    , cat: "portraits" , ratio: "2/3", alt: "Tattooed woman in orange glasses leaning on a chair" },
     { src: "images/editorial-06.jpg"   , cat: "editorial" , ratio: "2/3", alt: "Blue and purple light projection portrait" },
@@ -389,6 +389,9 @@ window.NOKA = {
     { src: "images/maternity-02.jpg"   , cat: "maternity" , ratio: "4/5", alt: "Couple's hands making a heart over her baby bump on a white floral dress" },
     { src: "images/maternity-03.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Dad-to-be in a navy cap kneeling with his hands on her bump in a garden" },
     { src: "images/maternity-04.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Sunlit maternity portrait in a white crop top and jeans under a stone arch" },
-    { src: "images/maternity-05.jpg"   , cat: "maternity" , ratio: "7/8", alt: "Expecting couple in their kitchen, her hand on her bump in a white cable-knit dress" }
+    { src: "images/maternity-05.jpg"   , cat: "maternity" , ratio: "7/8", alt: "Expecting couple in their kitchen, her hand on her bump in a white cable-knit dress" },
+    { src: "images/maternity-06.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Maternity portrait at sunset, cradling her bump in a white skirt as the waves roll in" },
+    { src: "images/maternity-07.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Black and white maternity photo of a couple on the beach, his hand on her bump" },
+    { src: "images/maternity-08.jpg"   , cat: "maternity" , ratio: "4/5", alt: "Maternity portrait on a picnic blanket beneath a clothesline of baby onesies and a sonogram" }
   ]
 };
