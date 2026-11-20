@@ -248,12 +248,13 @@ window.NOKA = {
     { id: "editorial", label: "Editorial" },
     { id: "couples",   label: "Couples" },
     { id: "beauty",    label: "Beauty" },
+    { id: "boudoir",   label: "Boudoir" },
     { id: "lifestyle", label: "Lifestyle" },
     { id: "family",    label: "Family" },
+    { id: "maternity", label: "Maternity", hideInAll: true },  // only shows when its tab is picked (two of its photos are already in Family)
     { id: "studio",    label: "Studio" },
     { id: "swimwear",  label: "Swimwear" },
-    { id: "business",  label: "Business" },
-    { id: "boudoir",   label: "Boudoir", hideInAll: true }   // only shows when its tab is picked
+    { id: "business",  label: "Business" }
   ],
 
   /* ------------------------------------------------------------------
@@ -383,6 +384,11 @@ window.NOKA = {
     { src: "images/boudoir-09.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black bodysuit, kneeling on a bed in soft window light" },
     { src: "images/boudoir-10.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Red stockings and heels kicked up over a cream sofa" },
     { src: "images/boudoir-11.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black bra and open jacket against city lights at night" },
-    { src: "images/boudoir-12.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "White lace, seated on the floor of a bright room with white shelves" }
+    { src: "images/boudoir-12.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "White lace, seated on the floor of a bright room with white shelves" },
+    { src: "images/maternity-01.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Maternity portrait at sunset, cradling her bump in a white skirt as the waves roll in" },
+    { src: "images/maternity-02.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Pregnancy silhouette against a red sun setting over the beach" },
+    { src: "images/maternity-03.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Black and white maternity photo of a couple on the beach, his hand on her bump" },
+    { src: "images/maternity-04.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Reclining in a white skirt on the sand at golden hour, maternity beach portrait" },
+    { src: "images/maternity-05.jpg"   , cat: "maternity" , ratio: "4/5", alt: "Maternity portrait on a picnic blanket beneath a clothesline of baby onesies and a sonogram" }
   ]
 };
