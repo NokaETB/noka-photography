@@ -248,12 +248,13 @@ window.NOKA = {
     { id: "editorial", label: "Editorial" },
     { id: "couples",   label: "Couples" },
     { id: "beauty",    label: "Beauty" },
+    { id: "boudoir",   label: "Boudoir" },
     { id: "lifestyle", label: "Lifestyle" },
     { id: "family",    label: "Family" },
+    { id: "maternity", label: "Maternity" },
     { id: "studio",    label: "Studio" },
     { id: "swimwear",  label: "Swimwear" },
-    { id: "business",  label: "Business" },
-    { id: "boudoir",   label: "Boudoir", hideInAll: true }   // only shows when its tab is picked
+    { id: "business",  label: "Business" }
   ],
 
   /* ------------------------------------------------------------------
@@ -383,6 +384,11 @@ window.NOKA = {
     { src: "images/boudoir-09.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black bodysuit, kneeling on a bed in soft window light" },
     { src: "images/boudoir-10.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Red stockings and heels kicked up over a cream sofa" },
     { src: "images/boudoir-11.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "Black bra and open jacket against city lights at night" },
-    { src: "images/boudoir-12.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "White lace, seated on the floor of a bright room with white shelves" }
+    { src: "images/boudoir-12.jpg"     , cat: "boudoir"   , ratio: "2/3", alt: "White lace, seated on the floor of a bright room with white shelves" },
+    { src: "images/maternity-01.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Expecting mom in a white floral dress looking down at her bump beneath a stone garden arch" },
+    { src: "images/maternity-02.jpg"   , cat: "maternity" , ratio: "4/5", alt: "Couple's hands making a heart over her baby bump on a white floral dress" },
+    { src: "images/maternity-03.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Dad-to-be in a navy cap kneeling with his hands on her bump in a garden" },
+    { src: "images/maternity-04.jpg"   , cat: "maternity" , ratio: "2/3", alt: "Sunlit maternity portrait in a white crop top and jeans under a stone arch" },
+    { src: "images/maternity-05.jpg"   , cat: "maternity" , ratio: "7/8", alt: "Expecting couple in their kitchen, her hand on her bump in a white cable-knit dress" }
   ]
 };
