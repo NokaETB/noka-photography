@@ -683,6 +683,45 @@ html.js .price-row.reveal.is-in::after { transform: scaleX(1); }
 .tile__name { transition: letter-spacing .7s var(--ease); }
 @media (hover: hover) { .tile:hover .tile__name { letter-spacing: .08em; } }
 
+/* ---------- featured work: one soft cursor spotlight across the grid ----------
+   js/motion.js adds .has-spot only for a fine hover pointer without reduced
+   motion, then feeds --gx/--gy (grid) and --mx/--my (each tile) in px.
+   The glow is decoration only: no pointer events, label stays above it. */
+.work__grid.has-spot {
+  --spot-size: 420px;          /* glow diameter */
+  --spot-rgb: 241 238 232;     /* paper */
+  --spot-a: .7;                /* intensity, 0-1 */
+  position: relative;
+}
+.work__grid.has-spot::before,
+.work__grid.has-spot .tile::before,
+.work__grid.has-spot .tile::after {
+  content: ""; position: absolute; pointer-events: none;
+  opacity: var(--spot-o, 0); transition: opacity .6s var(--ease);
+}
+.work__grid.is-lit { --spot-o: 1; }
+/* the same glow on the dark section between tiles, so it carries across gaps */
+.work__grid.has-spot::before {
+  inset: 0;
+  background: radial-gradient(calc(var(--spot-size) / 2) circle at var(--gx, 50%) var(--gy, 50%), rgb(var(--spot-rgb) / calc(var(--spot-a) * .2)), transparent 100%);
+}
+/* photo surface: soft light, eased off behind the label to keep it legible */
+.work__grid.has-spot .tile::before {
+  inset: 0; z-index: 1;
+  background: radial-gradient(calc(var(--spot-size) / 2) circle at var(--mx, -999px) var(--my, -999px), rgb(var(--spot-rgb) / calc(var(--spot-a) * .7)), transparent 100%);
+  mix-blend-mode: soft-light;
+  -webkit-mask-image: linear-gradient(to top, rgb(0 0 0 / .3), #000 45%);
+          mask-image: linear-gradient(to top, rgb(0 0 0 / .3), #000 45%);
+}
+/* 1px border lit by the same circle */
+.work__grid.has-spot .tile::after {
+  inset: 0; z-index: 3; padding: 1px;
+  background: radial-gradient(calc(var(--spot-size) / 2) circle at var(--mx, -999px) var(--my, -999px), rgb(var(--spot-rgb) / var(--spot-a)), transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+
 /* ---------- scroll-linked depth (browsers that support it; no JS) ---------- */
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {

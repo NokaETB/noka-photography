@@ -4,6 +4,7 @@
    - headings rise line by line (same move as the hero title)
    - nav: scroll progress hairline + current-section link
    - portfolio filters: one underline that slides to the chosen category
+   - featured work: one soft cursor spotlight across the tile grid
    - lightbox: soft crossfade between photos
    Everything is skipped or instant when the visitor prefers reduced motion.
    ========================================================================== */
@@ -102,6 +103,44 @@
     window.addEventListener('resize', function () { place(false); });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { place(false); });
     place(false);
+  }
+
+  /* ------------------------------------ FEATURED WORK: cursor spotlight */
+  // One soft glow follows a mouse across the whole tile grid, lighting each
+  // tile's photo and border from the same point (gaps included). Off for
+  // touch, coarse pointers and reduced motion; fades out when the pointer leaves.
+  var grid = $('.work__grid');
+  if (grid && window.matchMedia) {
+    var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    var lessMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var tiles = $$('.tile', grid);
+    var px = 0, py = 0, frame = 0, lit = false;
+    var allowed = function () { return finePointer.matches && !lessMotion.matches; };
+    var draw = function () {
+      frame = 0;
+      var g = grid.getBoundingClientRect();
+      grid.style.setProperty('--gx', (px - g.left).toFixed(1) + 'px');
+      grid.style.setProperty('--gy', (py - g.top).toFixed(1) + 'px');
+      tiles.forEach(function (t) {
+        var r = t.getBoundingClientRect();
+        t.style.setProperty('--mx', (px - r.left).toFixed(1) + 'px');
+        t.style.setProperty('--my', (py - r.top).toFixed(1) + 'px');
+      });
+    };
+    var queue = function () { if (!frame) frame = requestAnimationFrame(draw); };
+    var dim = function () { lit = false; grid.classList.remove('is-lit'); };
+    var sync = function () { grid.classList.toggle('has-spot', allowed()); if (!allowed()) dim(); };
+    grid.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'touch' || !allowed()) return;
+      px = e.clientX; py = e.clientY;
+      if (!lit) { lit = true; draw(); grid.classList.add('is-lit'); } else queue();
+    }, { passive: true });
+    grid.addEventListener('pointerleave', dim);
+    window.addEventListener('scroll', function () { if (lit) queue(); }, { passive: true });
+    [finePointer, lessMotion].forEach(function (m) {
+      if (m.addEventListener) m.addEventListener('change', sync); else if (m.addListener) m.addListener(sync);
+    });
+    sync();
   }
 
   /* ---------------------------------------------- LIGHTBOX: photo crossfade */
